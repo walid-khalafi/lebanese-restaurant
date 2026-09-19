@@ -1,0 +1,2072 @@
+﻿/* ==========================================================
+   Nil Lebanese - Custom Bootstrap 5 Luxury Theme Extension
+   Designed for Nil Lebanese Café (405 Chiswick High Rd, London)
+   ========================================================== */
+
+:root {
+  --tahdig-brand: #a83629;
+  --tahdig-brand-hover: #c94b3c;
+  --tahdig-brand-dark: #7d2319;
+  --tahdig-brand-light: #f59e8f;
+  --tahdig-gold: #d4af37;
+  --tahdig-gold-hover: #b89325;
+  --tahdig-gold-light: #fbeea4;
+  --tahdig-dark-bg: #12100e;
+  --tahdig-dark-card: #1c1715;
+  --tahdig-dark-card-hover: #241d1a;
+  --tahdig-dark-border: rgba(168, 54, 41, 0.3);
+  --tahdig-text-muted: #b8b0a5;
+}
+
+body {
+  background-color: var(--tahdig-dark-bg);
+  color: #f0ede6;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, .font-serif-luxury {
+  font-family: 'Cinzel', Georgia, serif;
+  letter-spacing: 0.5px;
+}
+
+/* Persian Brand & Gold Accents */
+.text-brand {
+  color: var(--tahdig-gold) !important;
+}
+
+.text-gold {
+  color: var(--tahdig-gold) !important;
+}
+
+.bg-brand {
+  background-color: var(--tahdig-brand) !important;
+  color: #ffffff !important;
+}
+
+.bg-gold {
+  background-color: var(--tahdig-gold) !important;
+  color: #12100e !important;
+  font-weight: 600;
+}
+
+.btn-tahdig {
+  background: linear-gradient(135deg, #a83629 0%, #c94b3c 50%, #7d2319 100%);
+  color: #ffffff;
+  font-weight: 700;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 12px 28px;
+  border-radius: 10px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 20px rgba(168, 54, 41, 0.35);
+}
+
+.btn-tahdig:hover {
+  background: linear-gradient(135deg, #c94b3c 0%, #e05e4e 50%, #a83629 100%);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(168, 54, 41, 0.5);
+}
+
+.btn-outline-gold {
+  border: 1px solid var(--tahdig-brand-light);
+  color: var(--tahdig-brand-light);
+  background: rgba(168, 54, 41, 0.1);
+  padding: 11px 26px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-gold:hover {
+  background: var(--tahdig-brand);
+  color: #ffffff;
+  border-color: var(--tahdig-brand);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(168, 54, 41, 0.4);
+}
+
+/* ==========================================================
+   Text Contrast & Readability on Dark Backgrounds
+   ========================================================== */
+
+/* Body copy that sits on --tahdig-dark-card needs to clear
+   WCAG AA (4.5 : 1 against #1c1715). Bootstrap's default
+   .text-secondary (#6c757d) is ~3.1 : 1 — too low for small
+   text. We override it site-wide to our warm off-white muted. */
+.text-secondary {
+  color: var(--tahdig-text-muted) !important; /* #b8b0a5 – ≈ 6.2 : 1 on card bg */
+}
+
+/* Card description paragraphs: bump opacity for crisp low-light legibility */
+.card-tahdig .card-text,
+.card-tahdig p {
+  color: var(--tahdig-text-muted);
+  opacity: 1; /* prevent Bootstrap's inherited opacity reductions */
+}
+
+/* Muted small labels inside cards (e.g. form labels, helper text) */
+.card-tahdig .form-label,
+.card-tahdig small {
+  color: #a09890 !important; /* slightly dimmer than body copy but still AA on card */
+}
+
+/* Luxury Cards */
+.card-tahdig {
+  background: var(--tahdig-dark-card);
+  border: 1px solid var(--tahdig-dark-border);
+  border-radius: 16px;
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+.card-tahdig:hover {
+  border-color: var(--tahdig-brand);
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6), 0 0 25px rgba(168, 54, 41, 0.2);
+}
+
+.card-tahdig img {
+  transition: transform 0.6s ease;
+}
+
+.card-tahdig:hover img {
+  transform: scale(1.05);
+}
+
+/* Badges */
+.badge-gold {
+  background-color: rgba(168, 54, 41, 0.2);
+  color: var(--tahdig-brand-light);
+  border: 1px solid rgba(168, 54, 41, 0.4);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Hero Carousel / Slider */
+.hero-carousel {
+  position: relative;
+  background-color: #0c0a09;
+}
+
+.hero-carousel .carousel-item {
+  height: 82vh;
+  min-height: 580px;
+  max-height: 820px;
+  background-color: #0c0a09;
+  overflow: hidden;
+}
+
+.hero-carousel .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.62) contrast(1.05);
+  transform: scale(1.05);
+  transition: transform 7s ease-out;
+}
+
+.hero-carousel .carousel-item.active img {
+  transform: scale(1.12);
+}
+
+.hero-carousel .carousel-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(168, 54, 41, 0.15) 0%, rgba(18, 16, 14, 0.6) 60%, rgba(18, 16, 14, 0.95) 100%);
+  pointer-events: none;
+}
+
+.hero-carousel .carousel-caption {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: auto;
+  left: 8%;
+  right: 8%;
+  padding: 0;
+  text-align: center;
+  z-index: 10;
+}
+
+.hero-glow-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 18px;
+  border-radius: 50px;
+  background: rgba(168, 54, 41, 0.25);
+  border: 1px solid rgba(168, 54, 41, 0.5);
+  color: var(--tahdig-brand-light);
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.hero-carousel .carousel-indicators [data-bs-target] {
+  width: 45px;
+  height: 4px;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: none;
+  margin: 0 5px;
+  transition: all 0.3s ease;
+}
+
+.hero-carousel .carousel-indicators .active {
+  width: 75px;
+  background-color: var(--tahdig-brand-light);
+  box-shadow: 0 0 10px rgba(168, 54, 41, 0.8);
+}
+
+.hero-carousel .carousel-control-prev,
+.hero-carousel .carousel-control-next {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: rgba(28, 23, 21, 0.7);
+  border: 1px solid var(--tahdig-dark-border);
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.8;
+  transition: all 0.3s ease;
+  margin: 0 20px;
+}
+
+.hero-carousel .carousel-control-prev:hover,
+.hero-carousel .carousel-control-next:hover {
+  background: var(--tahdig-brand);
+  opacity: 1;
+  border-color: var(--tahdig-brand);
+}
+
+/* Nav */
+.navbar-tahdig {
+  background: rgba(18, 16, 14, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--tahdig-dark-border);
+}
+
+.nav-link {
+  color: #d8d5d0 !important;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--tahdig-brand-light) !important;
+}
+
+/* Form Controls */
+.form-control-tahdig, .form-select-tahdig {
+  background: #12100e;
+  border: 1px solid var(--tahdig-dark-border);
+  color: #fff;
+  border-radius: 10px;
+  padding: 12px 16px;
+}
+
+.form-control-tahdig:focus, .form-select-tahdig:focus {
+  background: #171311;
+  border-color: var(--tahdig-brand);
+  box-shadow: 0 0 0 3px rgba(168, 54, 41, 0.3);
+  color: #fff;
+}
+
+/* ==========================================================
+   Mega Menu (navbar "Menu" item)
+   ========================================================== */
+.navbar .mega-menu {
+  position: static;
+  width: 100%;
+  background-color: #1a1513;
+  border: 1px solid rgba(168, 54, 41, 0.5);
+  border-radius: 16px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.65);
+}
+
+@media (min-width: 992px) {
+  .navbar .dropdown.mega-full {
+    position: static;
+  }
+  .navbar .dropdown.mega-full .mega-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    width: min(920px, calc(100vw - 2rem));
+    margin-top: 10px;
+  }
+}
+
+.mega-heading {
+  color: var(--tahdig-gold);
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+  padding-bottom: 8px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid rgba(168, 54, 41, 0.35);
+}
+
+.mega-cat-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.mega-cat-item:hover {
+  background: rgba(168, 54, 41, 0.15);
+  border-color: rgba(168, 54, 41, 0.45);
+}
+
+.mega-dish-item {
+  background: rgba(18, 16, 14, 0.65);
+  border: 1px solid rgba(168, 54, 41, 0.25);
+  transition: all 0.25s ease;
+}
+
+.mega-dish-item:hover {
+  border-color: var(--tahdig-brand);
+  background: rgba(168, 54, 41, 0.12);
+  transform: translateX(3px);
+}
+
+.mega-cta {
+  background: linear-gradient(150deg, rgba(168, 54, 41, 0.28) 0%, rgba(18, 16, 14, 0.92) 70%);
+  border: 1px solid rgba(168, 54, 41, 0.45);
+  border-radius: 12px;
+}
+
+.min-w-0 { min-width: 0; }
+
+/* ==========================================================
+   Quick View Modal
+   ========================================================== */
+.modal-tahdig .modal-content {
+  background: var(--tahdig-dark-card);
+  border: 1px solid var(--tahdig-dark-border);
+  color: #f0ede6;
+  border-radius: 18px;
+}
+
+.modal-tahdig .modal-header {
+  z-index: 5;
+}
+
+/* ==========================================================
+   Footer Trust Badges & Utilities
+   ========================================================== */
+.footer-badge {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #ffffff;
+  border: 2px solid rgba(212, 175, 55, 0.45);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.footer-badge:hover {
+  transform: translateY(-4px) scale(1.06);
+  border-color: var(--tahdig-gold);
+}
+
+.hover-gold {
+  transition: color 0.2s ease;
+}
+
+.hover-gold:hover {
+  color: var(--tahdig-gold) !important;
+}
+
+/* ==========================================================
+   Brand Logo (navbar + footer)
+   ========================================================== */
+.brand-logo-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  /* subtle glow that echoes the SVG's gold stroke */
+  filter: drop-shadow(0 2px 8px rgba(212, 147, 13, 0.45));
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-brand:hover .brand-logo-wrap,
+a:hover .brand-logo-wrap {
+  filter: drop-shadow(0 4px 14px rgba(212, 147, 13, 0.7));
+  transform: scale(1.06);
+}
+
+.brand-logo-wrap img {
+  width: auto;
+  height: 54px;   /* navbar size — tall enough to read the crest */
+  object-fit: contain;
+  display: block;
+}
+
+/* Slightly smaller in the footer */
+footer .brand-logo-wrap img {
+  height: 48px;
+}
+
+/* ==========================================================
+   Arabic Typography (Vazirmatn) — for Arabic accents
+   ========================================================== */
+.font-fa {
+  font-family: 'Vazirmatn', 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+/* ==========================================================
+   Ported design effects: shimmer / pulse-gold / float-slow
+   ========================================================== */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes pulseGold {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.45); }
+  50% { box-shadow: 0 0 0 12px rgba(212, 175, 55, 0); }
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-pulse-gold { animation: 3s infinite pulseGold; }
+
+.animate-float { animation: 6s ease-in-out infinite floatSlow; }
+
+.hero-glow-badge { animation: 6s ease-in-out infinite floatSlow; }
+
+.gold-shimmer {
+  background: linear-gradient(90deg, var(--tahdig-gold) 25%, #fff3c4 50%, var(--tahdig-gold) 75%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 3.5s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-pulse-gold,
+  .animate-float,
+  .hero-glow-badge,
+  .gold-shimmer {
+    animation: none;
+  }
+}
+
+/* ==========================================================
+   Scroll Reveal (progressive enhancement)
+   ========================================================== */
+.reveal-pending {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal-pending.reveal-in {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-pending {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ==========================================================
+   Tahdig Secrets section + Flip Simulator
+   ========================================================== */
+.secret-card {
+  background: var(--tahdig-dark-card);
+  border: 1px solid var(--tahdig-dark-border);
+  border-radius: 16px;
+  padding: 24px;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.secret-card:hover {
+  border-color: var(--tahdig-brand);
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.5);
+}
+
+.secret-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(168, 54, 41, 0.18);
+  border: 1px solid rgba(168, 54, 41, 0.45);
+  color: var(--tahdig-brand-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 14px;
+}
+
+.crunch-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--tahdig-gold);
+  border: 1px solid rgba(212, 175, 55, 0.5);
+  background: rgba(212, 175, 55, 0.12);
+  border-radius: 50px;
+  padding: 4px 12px;
+}
+
+.flip-scene {
+  perspective: 1200px;
+  cursor: pointer;
+  outline: none;
+}
+
+.flip-scene:focus-visible .flip-card {
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.6);
+}
+
+.flip-card {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  transform-style: preserve-3d;
+  transition: transform 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.flip-card.flipped {
+  transform: rotateY(180deg);
+}
+
+.flip-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+}
+
+.flip-front {
+  background: linear-gradient(160deg, #241d1a 0%, #12100e 70%);
+  border: 1px solid rgba(168, 54, 41, 0.5);
+}
+
+.flip-back {
+  transform: rotateY(180deg);
+  background: radial-gradient(circle at 50% 42%, #f6d67c 0%, #d4af37 38%, #a83629 100%);
+  border: 1px solid rgba(212, 175, 55, 0.8);
+  color: #12100e;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flip-card {
+    transition: none;
+  }
+}
+
+
+/* ==========================================================
+   Our Story & Culinary Heritage Section
+   ========================================================== */
+.heritage-section {
+  background: linear-gradient(160deg, #19100e 0%, #12100e 60%, #1a0f0d 100%);
+  border-top: 1px solid rgba(168, 54, 41, 0.18);
+  border-bottom: 1px solid rgba(168, 54, 41, 0.18);
+}
+
+.heritage-pillar {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.heritage-pillar-icon {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(168, 54, 41, 0.15);
+  border: 1px solid rgba(168, 54, 41, 0.4);
+  color: var(--tahdig-brand-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.heritage-pillar:hover .heritage-pillar-icon {
+  background: rgba(168, 54, 41, 0.3);
+  border-color: var(--tahdig-brand-light);
+}
+
+.heritage-pillar-text strong {
+  display: block;
+  color: #f0ede6;
+  font-weight: 600;
+  margin-bottom: 4px;
+  font-size: 0.95rem;
+}
+
+.heritage-pillar-text span {
+  color: var(--tahdig-text-muted);
+  font-size: 0.85rem;
+  line-height: 1.55;
+}
+
+.heritage-img-wrap {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(168, 54, 41, 0.35);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55);
+}
+
+.heritage-img-wrap img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  filter: brightness(0.88) saturate(1.1);
+  transition: transform 0.7s ease, filter 0.7s ease;
+}
+
+.heritage-img-wrap:hover img {
+  transform: scale(1.04);
+  filter: brightness(0.95) saturate(1.2);
+}
+
+.heritage-img-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 32px 24px 20px;
+  background: linear-gradient(to top, rgba(18, 16, 14, 0.92) 0%, transparent 100%);
+}
+
+/* ==========================================================
+   Customer Reviews / Social Proof Section
+   ========================================================== */
+.reviews-section {
+  background: #0e0c0b;
+  border-top: 1px solid rgba(168, 54, 41, 0.15);
+}
+
+.review-card {
+  background: var(--tahdig-dark-card);
+  border: 1px solid rgba(168, 54, 41, 0.22);
+  border-radius: 18px;
+  padding: 28px;
+  height: 100%;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.review-card::before {
+  content: '\201C';            /* opening double-quote */
+  position: absolute;
+  top: 14px;
+  right: 22px;
+  font-size: 5rem;
+  line-height: 1;
+  color: rgba(168, 54, 41, 0.18);
+  font-family: Georgia, serif;
+  pointer-events: none;
+}
+
+.review-card:hover {
+  border-color: var(--tahdig-gold);
+  transform: translateY(-5px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6), 0 0 28px rgba(212, 175, 55, 0.1);
+}
+
+.review-stars {
+  color: var(--tahdig-gold);
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.review-quote {
+  color: var(--tahdig-text-muted);
+  font-size: 0.93rem;
+  line-height: 1.7;
+  margin-top: 10px;
+  margin-bottom: 18px;
+}
+
+.review-source-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.73rem;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 50px;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  background: rgba(212, 175, 55, 0.08);
+  color: var(--tahdig-gold);
+}
+
+.review-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(168, 54, 41, 0.2);
+  border: 2px solid rgba(168, 54, 41, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--tahdig-brand-light);
+  flex-shrink: 0;
+}
+
+
+/* ==========================================================
+   Menu Page — Dietary Legend dots
+   ========================================================== */
+.dietary-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.dietary-halal  { background: #2ecc71; box-shadow: 0 0 6px rgba(46, 204, 113, 0.55); }
+.dietary-veg    { background: #27ae60; box-shadow: 0 0 6px rgba(39, 174, 96, 0.55);  }
+.dietary-vegan  { background: #a3e635; box-shadow: 0 0 6px rgba(163, 230, 53, 0.55); }
+
+/* ==========================================================
+   About Page — Hero Banner
+   ========================================================== */
+.about-page-banner {
+  min-height: 460px;
+  display: flex;
+  align-items: center;
+  background: #0c0a09;
+}
+
+.about-banner-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.35) saturate(1.1);
+  z-index: 0;
+}
+
+.about-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(168, 54, 41, 0.18) 0%,
+    rgba(18, 16, 14, 0.55) 55%,
+    rgba(18, 16, 14, 0.97) 100%
+  );
+  z-index: 0;
+}
+
+/* ==========================================================
+   About Page — Hero Narrative Image Block
+   ========================================================== */
+.about-hero-img-wrap {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(168, 54, 41, 0.4);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
+}
+
+.about-hero-img {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.85) saturate(1.1);
+  transition: transform 0.7s ease, filter 0.7s ease;
+}
+
+.about-hero-img-wrap:hover .about-hero-img {
+  transform: scale(1.04);
+  filter: brightness(0.92) saturate(1.2);
+}
+
+/* Floating badge — top-left corner */
+.about-img-badge-tl {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  background: rgba(18, 16, 14, 0.88);
+  border: 1px solid rgba(212, 175, 55, 0.55);
+  border-radius: 14px;
+  padding: 12px 16px;
+  text-align: center;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  min-width: 100px;
+}
+
+/* Floating badge — bottom-right corner */
+.about-img-badge-br {
+  position: absolute;
+  bottom: 80px;
+  right: 18px;
+  background: rgba(168, 54, 41, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50px;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 18px rgba(168, 54, 41, 0.4);
+  z-index: 2;
+}
+
+/* Gradient caption bar at image bottom */
+.about-img-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 28px 22px 18px;
+  background: linear-gradient(to top, rgba(18, 16, 14, 0.95) 0%, transparent 100%);
+  z-index: 2;
+}
+
+/* ==========================================================
+   About Page — Inline Stat Cards
+   ========================================================== */
+.about-stat-card {
+  background: var(--tahdig-dark-card);
+  border: 1px solid var(--tahdig-dark-border);
+  border-radius: 14px;
+  padding: 16px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.about-stat-card:hover {
+  border-color: var(--tahdig-gold);
+  transform: translateY(-3px);
+}
+
+.about-stat-number {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--tahdig-gold);
+  line-height: 1.1;
+}
+
+.about-stat-label {
+  font-size: 0.72rem;
+  color: var(--tahdig-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+/* ==========================================================
+   About Page — Culinary Pillars Cards
+   ========================================================== */
+.about-pillar-card {
+  background: var(--tahdig-dark-card);
+  border: 1px solid var(--tahdig-dark-border);
+  border-radius: 18px;
+  padding: 32px 28px;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle top accent line */
+.about-pillar-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, rgba(168, 54, 41, 0.6), transparent);
+  transition: background 0.4s ease;
+}
+
+.about-pillar-card:hover {
+  border-color: var(--tahdig-brand);
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55), 0 0 28px rgba(168, 54, 41, 0.15);
+}
+
+/* Featured (centre) pillar gets a gold accent */
+.about-pillar-card--featured {
+  border-color: rgba(212, 175, 55, 0.35);
+}
+
+.about-pillar-card--featured::before {
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.7), transparent);
+}
+
+.about-pillar-card--featured:hover {
+  border-color: var(--tahdig-gold);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55), 0 0 28px rgba(212, 175, 55, 0.15);
+}
+
+.about-pillar-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(168, 54, 41, 0.15);
+  border: 1px solid rgba(168, 54, 41, 0.45);
+  color: var(--tahdig-brand-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.7rem;
+  transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+.about-pillar-icon--gold {
+  background: rgba(212, 175, 55, 0.14);
+  border-color: rgba(212, 175, 55, 0.45);
+  color: var(--tahdig-gold);
+}
+
+.about-pillar-card:hover .about-pillar-icon {
+  background: rgba(168, 54, 41, 0.3);
+  border-color: var(--tahdig-brand-light);
+  transform: scale(1.08);
+}
+
+.about-pillar-card--featured:hover .about-pillar-icon {
+  background: rgba(212, 175, 55, 0.25);
+  border-color: var(--tahdig-gold);
+}
+
+.about-pillar-footer {
+  border-top: 1px solid rgba(168, 54, 41, 0.2);
+}
+
+.about-pillar-card--featured .about-pillar-footer {
+  border-color: rgba(212, 175, 55, 0.2);
+}
+
+/* ==========================================================
+   About Page — Mobina Quote Callout Block
+   ========================================================== */
+.about-quote-block {
+  background: var(--tahdig-dark-card);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 20px;
+  padding: 52px 52px 44px;
+  position: relative;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 40px rgba(212, 175, 55, 0.06);
+  overflow: hidden;
+}
+
+/* Warm glow behind the card */
+.about-quote-block::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 21px;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.12), transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.about-quote-mark {
+  position: absolute;
+  top: 16px;
+  left: 36px;
+  font-size: 9rem;
+  line-height: 1;
+  font-family: Georgia, serif;
+  color: rgba(212, 175, 55, 0.12);
+  pointer-events: none;
+  z-index: 0;
+  user-select: none;
+}
+
+.about-quote-rule {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.5), transparent);
+  position: relative;
+  z-index: 1;
+}
+
+.about-quote-text {
+  font-size: clamp(1.15rem, 2.2vw, 1.55rem);
+  font-style: italic;
+  color: #f0ede6;
+  line-height: 1.75;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.about-quote-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(168, 54, 41, 0.2);
+  border: 2px solid rgba(212, 175, 55, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 575.98px) {
+  .about-quote-block {
+    padding: 36px 24px 32px;
+  }
+
+  .about-quote-mark {
+    font-size: 6rem;
+    top: 8px;
+    left: 16px;
+  }
+}
+
+/* ==========================================================
+   About Page — Heritage Gallery
+   ========================================================== */
+.about-gallery-item {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(168, 54, 41, 0.3);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.about-gallery-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.75) saturate(1.05);
+  transition: transform 0.65s ease, filter 0.65s ease;
+}
+
+.about-gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(18, 16, 14, 0.92) 0%, rgba(18, 16, 14, 0.1) 55%, transparent 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: 24px 22px;
+  transition: background 0.4s ease;
+}
+
+.about-gallery-caption {
+  transform: translateY(6px);
+  transition: transform 0.4s ease;
+}
+
+.about-gallery-item:hover .about-gallery-img {
+  transform: scale(1.07);
+  filter: brightness(0.88) saturate(1.2);
+}
+
+.about-gallery-item:hover .about-gallery-overlay {
+  background: linear-gradient(to top, rgba(18, 16, 14, 0.95) 0%, rgba(18, 16, 14, 0.3) 65%, transparent 100%);
+}
+
+.about-gallery-item:hover .about-gallery-caption {
+  transform: translateY(0);
+}
+
+.about-gallery-item:hover {
+  border-color: var(--tahdig-brand);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.6), 0 0 22px rgba(168, 54, 41, 0.2);
+}
+
+/* ==========================================================
+   Reservation Page — Hero Banner
+   ========================================================== */
+.resv-page-banner {
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  background: #0c0a09;
+}
+
+.resv-banner-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  filter: brightness(0.3) saturate(1.05);
+  z-index: 0;
+}
+
+.resv-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(168, 54, 41, 0.2) 0%,
+    rgba(18, 16, 14, 0.5) 55%,
+    rgba(18, 16, 14, 0.97) 100%
+  );
+  z-index: 0;
+}
+
+/* ==========================================================
+   Reservation Page — Form Card
+   ========================================================== */
+.resv-form-card {
+  background: var(--tahdig-dark-card);
+  border: 1px solid var(--tahdig-dark-border);
+  border-radius: 20px;
+  padding: 36px 32px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle top accent line matching the about-pillar-card treatment */
+.resv-form-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, rgba(168, 54, 41, 0.7), transparent);
+}
+
+@media (max-width: 575.98px) {
+  .resv-form-card {
+    padding: 24px 18px;
+  }
+}
+
+/* Form field labels */
+.resv-label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--tahdig-text-muted);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+/* Styled radio options */
+.resv-radio-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(18, 16, 14, 0.6);
+  border: 1px solid rgba(168, 54, 41, 0.2);
+  border-radius: 10px;
+  padding: 8px 14px;
+  transition: border-color 0.25s ease, background 0.25s ease;
+  cursor: pointer;
+}
+
+.resv-radio-option:has(:checked) {
+  background: rgba(168, 54, 41, 0.14);
+  border-color: var(--tahdig-brand);
+}
+
+.resv-radio-option .form-check-label {
+  color: var(--tahdig-text-muted);
+  font-size: 0.85rem;
+  cursor: pointer;
+  margin-bottom: 0;
+  transition: color 0.25s ease;
+}
+
+.resv-radio-option:has(:checked) .form-check-label {
+  color: #f0ede6;
+}
+
+.resv-radio-option .form-check-input {
+  background-color: #12100e;
+  border-color: rgba(168, 54, 41, 0.5);
+  flex-shrink: 0;
+  margin-top: 0;
+}
+
+.resv-radio-option .form-check-input:checked {
+  background-color: var(--tahdig-brand);
+  border-color: var(--tahdig-brand);
+}
+
+.resv-radio-option .form-check-input:focus {
+  box-shadow: 0 0 0 3px rgba(168, 54, 41, 0.3);
+}
+
+/* ==========================================================
+   Reservation Page — Right Sidebar Info Cards
+   ========================================================== */
+.resv-info-card {
+  background: var(--tahdig-dark-card);
+  border: 1px solid var(--tahdig-dark-border);
+  border-radius: 18px;
+  padding: 28px;
+  transition: border-color 0.3s ease;
+}
+
+.resv-info-card:hover {
+  border-color: rgba(212, 175, 55, 0.3);
+}
+
+/* Opening hours row */
+.resv-hours-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.resv-hours-time {
+  font-size: 0.85rem;
+  color: var(--tahdig-text-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.resv-hours-divider {
+  height: 1px;
+  background: rgba(168, 54, 41, 0.15);
+}
+
+.resv-hours-peak {
+  color: var(--tahdig-brand-light);
+}
+
+.resv-peak-badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  background: rgba(168, 54, 41, 0.25);
+  color: var(--tahdig-brand-light);
+  border: 1px solid rgba(168, 54, 41, 0.45);
+  border-radius: 50px;
+  padding: 2px 7px;
+}
+
+/* Call link inside hours card */
+.resv-call-link {
+  border-radius: 12px;
+  padding: 10px;
+  transition: background 0.2s ease;
+}
+
+.resv-call-link:hover {
+  background: rgba(168, 54, 41, 0.1);
+}
+
+.resv-call-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(168, 54, 41, 0.15);
+  border: 1px solid rgba(168, 54, 41, 0.45);
+  color: var(--tahdig-brand-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+/* What-to-expect icon circles */
+.resv-expect-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(168, 54, 41, 0.14);
+  border: 1px solid rgba(168, 54, 41, 0.4);
+  color: var(--tahdig-brand-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+/* ==========================================================
+   Reservation Page — FAQ Accordion
+   ========================================================== */
+.resv-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.resv-accordion-item {
+  background: var(--tahdig-dark-card);
+  border: 1px solid var(--tahdig-dark-border) !important;
+  border-radius: 14px !important;
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+}
+
+.resv-accordion-item:has(.accordion-button:not(.collapsed)) {
+  border-color: var(--tahdig-brand) !important;
+  box-shadow: 0 4px 18px rgba(168, 54, 41, 0.15);
+}
+
+.resv-accordion-btn {
+  background: transparent !important;
+  color: #f0ede6 !important;
+  font-weight: 600;
+  font-size: 0.92rem;
+  padding: 18px 22px;
+  border-radius: 14px !important;
+  box-shadow: none !important;
+  transition: background 0.25s ease, color 0.25s ease !important;
+}
+
+.resv-accordion-btn:not(.collapsed) {
+  background: rgba(168, 54, 41, 0.12) !important;
+  color: #f0ede6 !important;
+}
+
+.resv-accordion-btn::after {
+  filter: invert(1) brightness(0.8);
+}
+
+.resv-accordion-btn:not(.collapsed)::after {
+  filter: invert(1) sepia(1) saturate(2) hue-rotate(5deg) brightness(1.1);
+}
+
+.resv-accordion-body {
+  background: transparent;
+  color: var(--tahdig-text-muted);
+  font-size: 0.88rem;
+  line-height: 1.75;
+  padding: 0 22px 20px;
+}
+
+/* ==========================================================
+   Reservation Page — Policy Summary Cards
+   ========================================================== */
+.resv-policy-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  background: var(--tahdig-dark-card);
+  border: 1px solid var(--tahdig-dark-border);
+  border-radius: 16px;
+  padding: 22px 20px;
+  transition: all 0.3s ease;
+}
+
+.resv-policy-card:hover {
+  border-color: var(--tahdig-brand);
+  transform: translateX(4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.resv-policy-card--gold {
+  border-color: rgba(212, 175, 55, 0.3);
+}
+
+.resv-policy-card--gold:hover {
+  border-color: var(--tahdig-gold);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 0 0 18px rgba(212, 175, 55, 0.1);
+}
+
+.resv-policy-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(168, 54, 41, 0.15);
+  border: 1px solid rgba(168, 54, 41, 0.45);
+  color: var(--tahdig-brand-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.resv-policy-card:hover .resv-policy-icon {
+  background: rgba(168, 54, 41, 0.28);
+  transform: scale(1.08);
+}
+
+.resv-policy-icon--gold {
+  background: rgba(212, 175, 55, 0.13);
+  border-color: rgba(212, 175, 55, 0.45);
+  color: var(--tahdig-gold);
+}
+
+.resv-policy-card--gold:hover .resv-policy-icon {
+  background: rgba(212, 175, 55, 0.25);
+}
+
+/* ==========================================================
+   Contact Page — Hero Banner
+   ========================================================== */
+.contact-page-banner {
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  background: #0c0a09;
+}
+
+.contact-banner-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+  filter: brightness(0.28) saturate(1.05);
+  z-index: 0;
+}
+
+.contact-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(168, 54, 41, 0.22) 0%,
+    rgba(18, 16, 14, 0.5) 55%,
+    rgba(18, 16, 14, 0.97) 100%
+  );
+  z-index: 0;
+}
+
+/* ==========================================================
+   Contact Page — Quick-contact strip items
+   ========================================================== */
+.contact-strip-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 8px;
+  border-radius: 14px;
+  border: 1px solid transparent;
+  transition: border-color 0.25s ease, background 0.25s ease;
+  cursor: default;
+}
+
+a.contact-strip-item {
+  cursor: pointer;
+}
+
+a.contact-strip-item:hover,
+.contact-strip-item:hover {
+  background: rgba(168, 54, 41, 0.1);
+  border-color: rgba(168, 54, 41, 0.3);
+}
+
+/* ==========================================================
+   Contact Page — Info Cards (address / phone / tube / hours)
+   ========================================================== */
+.contact-info-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  background: var(--tahdig-dark-card);
+  border: 1px solid var(--tahdig-dark-border);
+  border-radius: 16px;
+  padding: 22px 20px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-info-card:hover {
+  border-color: rgba(212, 175, 55, 0.3);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.contact-info-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(168, 54, 41, 0.15);
+  border: 1px solid rgba(168, 54, 41, 0.4);
+  color: var(--tahdig-brand-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.contact-info-card:hover .contact-info-icon {
+  background: rgba(168, 54, 41, 0.28);
+  transform: scale(1.08);
+}
+
+/* Icon variants */
+.contact-info-icon--brand {
+  background: rgba(168, 54, 41, 0.2);
+  border-color: rgba(168, 54, 41, 0.55);
+  color: var(--tahdig-brand-light);
+}
+
+.contact-info-icon--tube {
+  background: rgba(30, 58, 138, 0.25);   /* TfL dark-blue tint */
+  border-color: rgba(59, 130, 246, 0.4);
+  color: #93c5fd;
+}
+
+.contact-info-icon--gold {
+  background: rgba(212, 175, 55, 0.14);
+  border-color: rgba(212, 175, 55, 0.45);
+  color: var(--tahdig-gold);
+}
+
+.contact-info-card:hover .contact-info-icon--gold {
+  background: rgba(212, 175, 55, 0.25);
+}
+
+.contact-info-body {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Tube / transport badge chips */
+.contact-tube-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  padding: 3px 10px;
+  border-radius: 50px;
+  background: rgba(18, 16, 14, 0.7);
+  border: 1px solid rgba(168, 54, 41, 0.3);
+  color: var(--tahdig-text-muted);
+}
+
+/* Peak hours pill */
+.contact-peak-pill {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  background: rgba(168, 54, 41, 0.25);
+  color: var(--tahdig-brand-light);
+  border: 1px solid rgba(168, 54, 41, 0.45);
+  border-radius: 50px;
+  padding: 2px 7px;
+  vertical-align: middle;
+}
+
+/* Social buttons */
+.contact-social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--tahdig-text-muted);
+  text-decoration: none;
+  padding: 7px 14px;
+  border-radius: 50px;
+  border: 1px solid rgba(168, 54, 41, 0.3);
+  background: rgba(18, 16, 14, 0.6);
+  transition: all 0.25s ease;
+}
+
+.contact-social-btn:hover {
+  color: #f0ede6;
+  background: rgba(168, 54, 41, 0.18);
+  border-color: var(--tahdig-brand);
+  transform: translateY(-2px);
+}
+
+/* ==========================================================
+   Contact Page — Dark Map Card
+   ========================================================== */
+.contact-map-card {
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(168, 54, 41, 0.35);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.55);
+  transition: border-color 0.3s ease;
+}
+
+.contact-map-card:hover {
+  border-color: rgba(212, 175, 55, 0.35);
+}
+
+.contact-map-inner {
+  position: relative;
+}
+
+/* Map background — stylised dark grid */
+.contact-map-bg {
+  height: 240px;
+  background:
+    linear-gradient(rgba(212, 175, 55, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212, 175, 55, 0.04) 1px, transparent 1px),
+    radial-gradient(ellipse at 50% 50%, #1e1208 0%, #12100e 70%, #0c0a09 100%);
+  background-size: 40px 40px, 40px 40px, 100% 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle radial glow from the pin */
+.contact-map-bg::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(168, 54, 41, 0.18) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.contact-map-grid {
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(168, 54, 41, 0.07) 40px),
+    repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(168, 54, 41, 0.07) 40px);
+}
+
+/* Location pin */
+.contact-map-pin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.contact-map-pin-dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50% 50% 50% 0;
+  background: var(--tahdig-brand);
+  border: 3px solid #fff;
+  transform: rotate(-45deg);
+  box-shadow: 0 4px 12px rgba(168, 54, 41, 0.7);
+  position: relative;
+  z-index: 2;
+}
+
+/* Ripple pulse around pin */
+.contact-map-pin-pulse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(168, 54, 41, 0.25);
+  animation: mapPinPulse 2.4s ease-out infinite;
+  z-index: 1;
+}
+
+@keyframes mapPinPulse {
+  0%   { transform: translate(-50%, -50%) scale(0.6); opacity: 0.9; }
+  100% { transform: translate(-50%, -50%) scale(2.2); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-map-pin-pulse { animation: none; }
+}
+
+/* Street / station labels floating on the map */
+.contact-map-label {
+  position: absolute;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 50px;
+  background: rgba(18, 16, 14, 0.82);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  color: var(--tahdig-text-muted);
+  white-space: nowrap;
+  backdrop-filter: blur(4px);
+}
+
+.contact-map-label--watling {
+  bottom: 56px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.contact-map-label--tube {
+  top: 22px;
+  right: 22px;
+  color: #93c5fd;
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+/* Address overlay at map bottom */
+.contact-map-address {
+  background: var(--tahdig-dark-card);
+  border-top: 1px solid rgba(168, 54, 41, 0.25);
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.contact-map-address-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(168, 54, 41, 0.18);
+  border: 1px solid rgba(168, 54, 41, 0.45);
+  color: var(--tahdig-brand-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+/* ==========================================================
+   Contact Page — Enquiry Form Card
+   ========================================================== */
+.contact-form-card {
+  background: var(--tahdig-dark-card);
+  border: 1px solid var(--tahdig-dark-border);
+  border-radius: 20px;
+  padding: 34px 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-form-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.55), transparent);
+}
+
+@media (max-width: 575.98px) {
+  .contact-form-card {
+    padding: 22px 16px;
+  }
+}
+
+/* ==========================================================
+   Contact Page — Directions Grid Cards
+   ========================================================== */
+.contact-direction-card {
+  background: var(--tahdig-dark-card);
+  border: 1px solid var(--tahdig-dark-border);
+  border-radius: 18px;
+  padding: 28px 24px;
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-direction-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, rgba(168, 54, 41, 0.5), transparent);
+  transition: background 0.35s ease;
+}
+
+.contact-direction-card:hover {
+  border-color: var(--tahdig-brand);
+  transform: translateY(-5px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5), 0 0 22px rgba(168, 54, 41, 0.15);
+}
+
+/* Gold featured variant (private events) */
+.contact-direction-card--gold {
+  border-color: rgba(212, 175, 55, 0.3);
+}
+
+.contact-direction-card--gold::before {
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.65), transparent);
+}
+
+.contact-direction-card--gold:hover {
+  border-color: var(--tahdig-gold);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5), 0 0 22px rgba(212, 175, 55, 0.12);
+}
+
+.contact-direction-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(168, 54, 41, 0.15);
+  border: 1px solid rgba(168, 54, 41, 0.45);
+  color: var(--tahdig-brand-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 18px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.contact-direction-card:hover .contact-direction-icon {
+  background: rgba(168, 54, 41, 0.28);
+  transform: scale(1.08);
+}
+
+.contact-direction-icon--tube {
+  background: rgba(30, 58, 138, 0.22);
+  border-color: rgba(59, 130, 246, 0.4);
+  color: #93c5fd;
+}
+
+.contact-direction-card:hover .contact-direction-icon--tube {
+  background: rgba(30, 58, 138, 0.36);
+}
+
+.contact-direction-icon--gold {
+  background: rgba(212, 175, 55, 0.14);
+  border-color: rgba(212, 175, 55, 0.45);
+  color: var(--tahdig-gold);
+}
+
+.contact-direction-card--gold:hover .contact-direction-icon--gold {
+  background: rgba(212, 175, 55, 0.26);
+}
+
+/* ==========================================================
+   Dish Detail Page
+   ========================================================== */
+
+/* ── Main image wrap ── */
+.dd-main-img-wrap {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(168, 54, 41, 0.4);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  background: #0c0a09;
+}
+
+.dd-main-img {
+  width: 100%;
+  max-height: 460px;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.92) saturate(1.08);
+  transition: transform 0.65s ease, filter 0.65s ease;
+}
+
+.dd-main-img-wrap:hover .dd-main-img {
+  transform: scale(1.04);
+  filter: brightness(1) saturate(1.15);
+}
+
+/* ── Thumbnail strip ── */
+.dd-thumbs-strip {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+
+/* JS injects <img data-gallery-thumb> here.
+   We style the images it produces via attribute selector
+   so no class changes in main.js are needed. */
+.dd-thumbs-strip img {
+  width: 80px;
+  height: 62px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  outline-offset: 2px;
+}
+
+.dd-thumbs-strip img:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+}
+
+.dd-thumbs-strip img.border-danger {
+  box-shadow: 0 0 0 2px var(--tahdig-brand), 0 4px 14px rgba(168, 54, 41, 0.45);
+}
+
+/* ── Chef's note callout ── */
+.dd-chef-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: rgba(212, 175, 55, 0.07);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: 14px;
+  padding: 18px 20px;
+}
+
+.dd-chef-note-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(212, 175, 55, 0.15);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  color: var(--tahdig-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+/* ── Price row ── */
+.dd-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.dd-price {
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  font-weight: 700;
+  color: var(--tahdig-gold);
+  line-height: 1;
+  letter-spacing: 0.5px;
+}
+
+.dd-price-note {
+  font-size: 0.8rem;
+  color: var(--tahdig-text-muted);
+}
+
+/* ── Horizontal rules ── */
+.dd-rule {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(168, 54, 41, 0.45), transparent);
+}
+
+.dd-rule-thin {
+  height: 1px;
+  background: rgba(168, 54, 41, 0.18);
+}
+
+/* ── Ingredients / pairing specs card ── */
+.dd-specs-card {
+  background: var(--tahdig-dark-card);
+  border: 1px solid var(--tahdig-dark-border);
+  border-radius: 16px;
+  padding: 24px 22px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Gold top accent line */
+.dd-specs-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.55), transparent);
+}
+
+.dd-specs-heading {
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--tahdig-gold);
+  margin-bottom: 14px;
+}
+
+/* Ingredient badge chips — JS writes bg-dark border border-secondary
+   badges; we elevate their contrast here without touching JS output */
+.dd-specs-card .badge.bg-dark {
+  background: rgba(28, 23, 21, 0.9) !important;
+  border-color: rgba(168, 54, 41, 0.35) !important;
+  color: #e8e4de !important;
+  font-weight: 500;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.dd-specs-card .badge.bg-dark:hover {
+  background: rgba(168, 54, 41, 0.15) !important;
+  border-color: var(--tahdig-brand) !important;
+}
+
+/* ── Provenance trust chips ── */
+.dd-trust-chip {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  padding: 5px 12px;
+  border-radius: 50px;
+  background: rgba(212, 175, 55, 0.07);
+  border: 1px solid rgba(212, 175, 55, 0.28);
+  color: var(--tahdig-text-muted);
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.dd-trust-chip:hover {
+  background: rgba(212, 175, 55, 0.14);
+  border-color: rgba(212, 175, 55, 0.5);
+  color: #f0ede6;
+}
+
+/* ── Mobile tweaks ── */
+@media (max-width: 575.98px) {
+  .dd-main-img {
+    max-height: 280px;
+  }
+
+  .dd-price {
+    font-size: 2rem;
+  }
+}

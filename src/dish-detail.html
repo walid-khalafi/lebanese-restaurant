@@ -1,0 +1,347 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/svg+xml" href="img/logo.svg">
+  <title>Nil Lebanese | Dish Detail</title>
+  <meta name="description" content="Explore every dish on Nil Lebanese menu. Ingredients, chef's notes, pairing suggestions and more.">
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Vazirmatn:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ╔══════════════════════════════════════════════════╗ -->
+  <!--   TOP INFO BAR                                      -->
+  <!-- ╚══════════════════════════════════════════════════╝ -->
+  <div class="bg-black py-2 border-bottom border-warning border-opacity-10 small">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap gap-2 text-secondary">
+      <div class="d-flex align-items-center gap-3">
+        <span><i class="bi bi-geo-alt-fill text-gold me-1"></i> 405 Chiswick High Rd, London W4 4AR</span>
+        <span class="d-none d-md-inline"><i class="bi bi-clock-fill text-gold me-1"></i> Open Daily: 8:00 AM – 9:00 PM</span>
+      </div>
+      <div class="d-flex align-items-center gap-3">
+        <a href="tel:02045414261" class="text-decoration-none text-light"><i class="bi bi-telephone-fill text-gold me-1"></i> 020 4541 4261</a>
+        <span class="badge badge-gold px-2 py-1"><i class="bi bi-star-fill me-1"></i> 4.4 / 5.0 Google</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ╔══════════════════════════════════════════════════╗ -->
+  <!--   STICKY NAVBAR                                     -->
+  <!-- ╚══════════════════════════════════════════════════╝ -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-tahdig sticky-top py-3">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-3" href="index.html">
+        <span class="brand-logo-wrap"><img src="img/logo.svg" alt="Nil Lebanese Logo" width="54" height="62"></span>
+        <div>
+          <span class="fs-4 fw-black text-white font-serif-luxury tracking-wider d-block lh-1">NIL LEBANESE</span>
+          <small class="text-uppercase fw-semibold" style="color: var(--tahdig-gold); letter-spacing: 2px; font-size: 0.65rem;">Lebanese Café · Chiswick</small>
+        </div>
+      </a>
+      <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-lg-3">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="menu.html" data-nav-menu>Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">Our Story</a></li>
+          <li class="nav-item"><a class="nav-link" href="reservation.html">Reservations</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact &amp; Location</a></li>
+          <li class="nav-item ms-lg-2">
+            <a href="reservation.html" class="btn btn-tahdig btn-sm px-3 py-2"><i class="bi bi-calendar-check me-1"></i> Book Table</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ╔══════════════════════════════════════════════════╗ -->
+  <!--   BREADCRUMB                                        -->
+  <!-- ╚══════════════════════════════════════════════════╝ -->
+  <div class="bg-black border-bottom border-warning border-opacity-10 py-3">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0 small">
+          <li class="breadcrumb-item">
+            <a href="index.html" class="text-secondary text-decoration-none hover-gold">
+              <i class="bi bi-house me-1"></i>Home
+            </a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="menu.html" class="text-secondary text-decoration-none hover-gold">Menu</a>
+          </li>
+          <li class="breadcrumb-item">
+            <!-- JS sets href and textContent via ddCatLink -->
+            <a href="menu.html" id="ddCatLink" class="text-secondary text-decoration-none hover-gold">Category</a>
+          </li>
+          <li class="breadcrumb-item active text-gold fw-semibold" aria-current="page" id="ddCrumb">
+            Dish
+          </li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ╔══════════════════════════════════════════════════╗ -->
+  <!--   DISH DETAIL — JS populates all dd* IDs            -->
+  <!-- ╚══════════════════════════════════════════════════╝ -->
+  <section class="py-5" data-dish-detail style="background:var(--tahdig-dark-bg);">
+    <div class="container py-3">
+      <div class="row g-5 align-items-start">
+
+        <!-- ── LEFT: Image gallery column ── -->
+        <div class="col-lg-6" data-reveal>
+
+          <!-- Main image -->
+          <div class="dd-main-img-wrap">
+            <img id="ddImage"
+                 src="img/dish-royal-lamb-tahdig-burger.jpg"
+                 alt="Royal Lamb Tahdig Burger"
+                 class="dd-main-img">
+            <!-- Price ribbon — JS does not touch this element; price shown in specs below -->
+          </div>
+
+          <!-- Thumbnail strip — JS writes data-gallery-thumb imgs here -->
+          <div class="dd-thumbs-strip" id="ddThumbs" role="list" aria-label="Dish gallery thumbnails">
+            <!-- Populated by initDishDetail() -->
+          </div>
+
+          <!-- Chef's note card — purely presentational, no JS dependency -->
+          <div class="dd-chef-note mt-4" data-reveal>
+            <div class="dd-chef-note-icon" aria-hidden="true">
+              <i class="bi bi-stars"></i>
+            </div>
+            <div>
+              <strong class="text-white d-block mb-1" style="font-size:0.88rem;font-family:'Cinzel',Georgia,serif;letter-spacing:0.4px;">
+                Chef our founder's Note
+              </strong>
+              <p class="mb-0" style="color:var(--tahdig-text-muted);font-size:0.83rem;line-height:1.65;">
+                Every dish leaves our kitchen freshly made and to order. If something isn't right, send it back — no questions asked.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ── RIGHT: Specs & actions column ── -->
+        <div class="col-lg-6" data-reveal>
+
+          <!-- Badges row — JS replaces innerHTML -->
+          <div class="d-flex flex-wrap gap-2 mb-3" id="ddBadges">
+            <span class="badge badge-gold">House Specialty</span>
+          </div>
+
+          <!-- Dish name — JS sets textContent -->
+          <h1 class="display-5 text-white font-serif-luxury mb-1 lh-1" id="ddName">
+            Royal Lamb Tahdig Burger
+          </h1>
+
+          <!-- Arabic name — JS sets textContent + adds font-fa class -->
+          <p class="text-gold mb-3 font-fa" id="ddNameFa"
+             style="font-size:1.05rem;letter-spacing:0.5px;">
+            برگر تهدیگ گوشت بره سلطنتی
+          </p>
+
+          <!-- Price + sub-label -->
+          <div class="dd-price-row mb-4">
+            <span class="dd-price font-serif-luxury" id="ddPrice">£18.50</span>
+            <span class="dd-price-note">Inclusive of VAT &amp; fresh salad garnish</span>
+          </div>
+
+          <!-- Description — JS sets textContent -->
+          <p class="mb-4" id="ddDesc"
+             style="color:var(--tahdig-text-muted);line-height:1.85;font-size:0.97rem;">
+            Our signature creation: spiced slow-braised pulled British lamb in a crispy golden bun, accompanied by garlic aioli and fresh relish.
+          </p>
+
+          <!-- Divider -->
+          <div class="dd-rule mb-4"></div>
+
+          <!-- Ingredients & Pairing card — JS replaces ddIngredients & ddPairing -->
+          <div class="dd-specs-card mb-4">
+            <h6 class="dd-specs-heading">
+              <i class="bi bi-flower1 me-2"></i>Handcrafted Ingredients
+            </h6>
+            <!-- JS writes badge spans here -->
+            <div class="d-flex flex-wrap gap-2 mb-3" id="ddIngredients"></div>
+
+            <div class="dd-rule-thin mb-3"></div>
+
+            <h6 class="dd-specs-heading">
+              <i class="bi bi-cup-hot me-2"></i>Recommended Pairing
+            </h6>
+            <!-- JS writes innerHTML here -->
+            <p class="mb-0 small" id="ddPairing"
+               style="color:var(--tahdig-text-muted);line-height:1.7;"></p>
+          </div>
+
+          <!-- Provenance trust chips -->
+          <div class="d-flex flex-wrap gap-2 mb-5">
+            <span class="dd-trust-chip"><i class="bi bi-patch-check-fill text-gold me-1"></i>100% Halal Certified</span>
+            <span class="dd-trust-chip"><i class="bi bi-fire text-gold me-1"></i>Natural Charcoal Grill</span>
+            <span class="dd-trust-chip"><i class="bi bi-basket2 text-gold me-1"></i>Fresh Ingredients Daily</span>
+          </div>
+
+          <!-- CTA buttons -->
+          <div class="d-flex gap-3 flex-wrap">
+            <!-- JS updates href via ddReserveLink -->
+            <a href="reservation.html" id="ddReserveLink"
+               class="btn btn-tahdig btn-lg px-4 flex-grow-1 animate-pulse-gold">
+              <i class="bi bi-calendar2-heart me-2"></i>Book a Table
+            </a>
+            <a href="menu.html" class="btn btn-outline-gold btn-lg px-4">
+              <i class="bi bi-arrow-left me-2"></i>Full Menu
+            </a>
+          </div>
+
+        </div>
+        <!-- /right col -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ╔══════════════════════════════════════════════════╗ -->
+  <!--   EXPERIENCE STRIP — purely static, no JS          -->
+  <!-- ╚══════════════════════════════════════════════════╝ -->
+  <div class="py-4 border-top border-bottom border-warning border-opacity-10 bg-black">
+    <div class="container">
+      <div class="row g-3 text-center">
+        <div class="col-6 col-md-3">
+          <i class="bi bi-hourglass-split text-gold fs-4 mb-1 d-block"></i>
+          <span class="text-white fw-semibold small d-block">Made to Order</span>
+          <span class="small" style="color:var(--tahdig-text-muted);">Every dish freshly prepared</span>
+        </div>
+        <div class="col-6 col-md-3">
+          <i class="bi bi-fire text-gold fs-4 mb-1 d-block"></i>
+          <span class="text-white fw-semibold small d-block">Natural Charcoal</span>
+          <span class="small" style="color:var(--tahdig-text-muted);">Never gas, never electric</span>
+        </div>
+        <div class="col-6 col-md-3">
+          <i class="bi bi-patch-check-fill text-gold fs-4 mb-1 d-block"></i>
+          <span class="text-white fw-semibold small d-block">100% Halal</span>
+          <span class="small" style="color:var(--tahdig-text-muted);">British certified farm meats</span>
+        </div>
+        <div class="col-6 col-md-3">
+          <i class="bi bi-flower1 text-gold fs-4 mb-1 d-block"></i>
+          <span class="text-white fw-semibold small d-block">Fresh Ingredients</span>
+          <span class="small" style="color:var(--tahdig-text-muted);">Sourced and prepped daily</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ╔══════════════════════════════════════════════════╗ -->
+  <!--   RELATED DISHES — JS populates ddRelatedRow       -->
+  <!-- ╚══════════════════════════════════════════════════╝ -->
+  <section class="py-5" style="background:linear-gradient(160deg,#19100e 0%,#12100e 60%,#1a0f0d 100%);">
+    <div class="container py-3">
+
+      <div class="d-flex justify-content-between align-items-end mb-5 flex-wrap gap-3">
+        <div>
+          <span class="text-gold gold-shimmer text-uppercase tracking-wider small fw-semibold">You May Also Like</span>
+          <h2 class="display-6 text-white font-serif-luxury mt-1 mb-0">Related Dishes</h2>
+        </div>
+        <a href="menu.html" class="btn btn-outline-gold btn-sm px-4">
+          <i class="bi bi-grid me-1"></i>Browse Full Menu
+        </a>
+      </div>
+
+      <!-- JS writes col-md-4 cards here via relatedCardHtml() -->
+      <div class="row g-4" id="ddRelatedRow"></div>
+
+    </div>
+  </section>
+
+  <!-- ╔══════════════════════════════════════════════════╗ -->
+  <!--   BOOK CTA STRIP                                    -->
+  <!-- ╚══════════════════════════════════════════════════╝ -->
+  <section class="py-5 bg-black border-top border-warning border-opacity-10">
+    <div class="container text-center py-3" data-reveal>
+      <span class="text-gold gold-shimmer text-uppercase tracking-wider small fw-semibold d-block mb-3">Ready to Taste It?</span>
+      <h2 class="display-6 text-white font-serif-luxury mb-3">Reserve Your Table Tonight</h2>
+      <p class="mb-4 mx-auto" style="color:var(--tahdig-text-muted);max-width:500px;line-height:1.75;">
+        Open daily 9 AM – 9:00 PM. Walk-ins welcome, reservations recommended for Friday and Saturday evenings.
+      </p>
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <a href="reservation.html" class="btn btn-tahdig btn-lg px-5">
+          <i class="bi bi-calendar2-heart me-2"></i>Book a Table
+        </a>
+        <a href="tel:02045414261" class="btn btn-outline-gold btn-lg px-5">
+          <i class="bi bi-telephone me-2"></i>020 4541 4261
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ╔══════════════════════════════════════════════════╗ -->
+  <!--   FOOTER                                            -->
+  <!-- ╚══════════════════════════════════════════════════╝ -->
+  <footer class="bg-black pt-5 pb-4 border-top border-warning border-opacity-10 text-secondary">
+    <div class="container">
+      <div class="row g-4 justify-content-between">
+
+        <!-- Brand & Trust Badges -->
+        <div class="col-lg-4">
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <span class="brand-logo-wrap"><img src="img/logo.svg" alt="Nil Lebanese Logo" width="54" height="62"></span>
+            <span class="fw-bold fs-4 text-white font-serif-luxury">NIL LEBANESE</span>
+          </div>
+          <p class="small">
+            Your neighbourhood Lebanese café on Chiswick High Road. Freshly made Lebanese food from breakfast to dinner — wraps, mezze, charcoal grills and more.
+          </p>
+          <div class="d-flex gap-3 fs-5 mt-3">
+            <a href="https://instagram.com/nillebanese" target="_blank" class="text-gold" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://facebook.com/nillebanese" target="_blank" class="text-gold" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="tel:02045414261" class="text-gold" aria-label="Call us"><i class="bi bi-telephone-fill"></i></a>
+          </div>
+          <div class="d-flex flex-wrap gap-3 mt-4">
+            <img src="img/authentic-persian-cuisine.png" alt="Authentic Lebanese Food - Top Quality" class="footer-badge" loading="lazy" width="84" height="84">
+            <img src="img/halal-food.png" alt="100% Halal Food Certified" class="footer-badge" loading="lazy" width="84" height="84">
+            <img src="img/free-delivery.png" alt="Free Delivery Services" class="footer-badge" loading="lazy" width="84" height="84">
+          </div>
+        </div>
+
+        <!-- Quick Navigation -->
+        <div class="col-lg-3 col-6">
+          <h6 class="text-white font-serif-luxury mb-3">Quick Navigation</h6>
+          <ul class="list-unstyled small d-flex flex-column gap-2">
+            <li><a href="index.html" class="text-decoration-none text-secondary hover-gold">Home</a></li>
+            <li><a href="menu.html" class="text-decoration-none text-secondary hover-gold">Complete Menu</a></li>
+            <li><a href="about.html" class="text-decoration-none text-secondary hover-gold">Our Story</a></li>
+            <li><a href="reservation.html" class="text-decoration-none text-secondary hover-gold">Table Reservation</a></li>
+            <li><a href="contact.html" class="text-decoration-none text-secondary hover-gold">Find Us in London</a></li>
+          </ul>
+        </div>
+
+        <!-- Visit Us -->
+        <div class="col-lg-4 col-6">
+          <h6 class="text-white font-serif-luxury mb-3">Visit Us</h6>
+          <p class="small mb-2"><i class="bi bi-geo-alt text-gold me-2"></i> 405 Chiswick High Rd, London W4 4AR</p>
+          <p class="small mb-2"><i class="bi bi-train-front text-gold me-2"></i> District Line (Gunnersbury Station)</p>
+          <p class="small mb-2"><i class="bi bi-telephone text-gold me-2"></i> 020 4541 4261</p>
+          <p class="small mb-0"><i class="bi bi-clock text-gold me-2"></i> Mon - Sun: 8:00 AM - 9:00 PM</p>
+        </div>
+
+      </div>
+      <div class="text-center pt-4 mt-4 border-top border-secondary border-opacity-25 small">
+        <p class="mb-0">© 2026 Nil Lebanese Café Ltd. All Rights Reserved. Designed by Walid Khalafi</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/dishes.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

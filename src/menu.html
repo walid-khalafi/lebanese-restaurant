@@ -1,0 +1,695 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/svg+xml" href="img/logo.svg">
+  <title>Menu | Nil Lebanese – Lebanese Wraps, Mezze & Grills</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Vazirmatn:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Top Bar -->
+  <div class="bg-black py-2 border-bottom border-warning border-opacity-10 small">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap gap-2 text-secondary">
+      <div class="d-flex align-items-center gap-3">
+        <span><i class="bi bi-geo-alt-fill text-gold me-1"></i> 405 Chiswick High Rd, London W4 4AR</span>
+        <span class="d-none d-md-inline"><i class="bi bi-clock-fill text-gold me-1"></i> Open Daily: 8:00 AM – 9:00 PM</span>
+      </div>
+      <div class="d-flex align-items-center gap-3">
+        <a href="tel:02045414261" class="text-decoration-none text-light"><i class="bi bi-telephone-fill text-gold me-1"></i> 020 4541 4261</a>
+        <span class="badge badge-gold px-2 py-1"><i class="bi bi-star-fill me-1"></i> 4.4 / 5.0 Google</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-tahdig sticky-top py-3">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-3" href="index.html">
+        <span class="brand-logo-wrap"><img src="img/logo.svg" alt="Nil Lebanese Logo" width="54" height="62"></span>
+        <div>
+          <span class="fs-4 fw-black text-white font-serif-luxury tracking-wider d-block lh-1">NIL LEBANESE</span>
+          <small class="text-uppercase fw-semibold" style="color: var(--tahdig-gold); letter-spacing: 2px; font-size: 0.65rem;">Lebanese Café · Chiswick</small>
+        </div>
+      </a>
+      <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-lg-3">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item">
+            <a class="nav-link active" href="menu.html" data-nav-menu>Menu</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="about.html">Our Story</a></li>
+          <li class="nav-item"><a class="nav-link" href="reservation.html">Reservations</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact & Location</a></li>
+          <li class="nav-item ms-lg-2">
+            <a href="reservation.html" class="btn btn-tahdig btn-sm px-3 py-2"><i class="bi bi-calendar-check me-1"></i> Book Table</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <div class="py-5 bg-black border-bottom border-warning border-opacity-10 text-center">
+    <div class="container py-3">
+      <span class="text-gold text-uppercase tracking-wider small fw-semibold">Culinary Selections</span>
+      <h1 class="display-4 text-white font-serif-luxury mt-1">Our Lebanese Menu</h1>
+      <p class="text-secondary max-w-xl mx-auto mb-4">Every dish is freshly made using quality ingredients and traditional Lebanese recipes — from charcoal-grilled meats to homemade mezze.</p>
+
+      <!-- Category Filter Pills -->
+      <div class="d-flex flex-wrap justify-content-center gap-2">
+        <button class="btn btn-tahdig btn-sm active" data-filter="all"><i class="bi bi-grid-fill me-1"></i>All Dishes</button>
+        <button class="btn btn-outline-gold btn-sm" data-filter="tahdig"><i class="bi bi-fire me-1"></i>Charcoal Grills</button>
+        <button class="btn btn-outline-gold btn-sm" data-filter="kebabs"><i class="bi bi-flame me-1"></i>Wraps &amp; Kebabs</button>
+        <button class="btn btn-outline-gold btn-sm" data-filter="stews"><i class="bi bi-cup-hot me-1"></i>Lebanese Stews</button>
+        <button class="btn btn-outline-gold btn-sm" data-filter="starters"><i class="bi bi-egg-fried me-1"></i>Mazeh & Starters</button>
+        <button class="btn btn-outline-gold btn-sm" data-filter="salads"><i class="bi bi-flower1 me-1"></i>Salads & Soups</button>
+        <button class="btn btn-outline-gold btn-sm" data-filter="desserts"><i class="bi bi-cup-straw me-1"></i>Desserts & Drinks</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dietary Legend Bar -->
+  <div class="bg-black border-bottom border-warning border-opacity-10 py-3">
+    <div class="container">
+      <div class="d-flex flex-wrap justify-content-center align-items-center gap-3 gap-md-4">
+        <span class="small fw-semibold" style="color: var(--tahdig-text-muted); letter-spacing: 0.3px;">
+          <i class="bi bi-info-circle text-gold me-1"></i> Dietary Information:
+        </span>
+        <span class="d-flex align-items-center gap-2 small">
+          <span class="dietary-dot dietary-halal"></span>
+          <span class="text-white fw-semibold">100% Halal</span>
+          <span style="color: var(--tahdig-text-muted);">— All meats certified Halal</span>
+        </span>
+        <span class="d-none d-sm-inline text-secondary opacity-25">|</span>
+        <span class="d-flex align-items-center gap-2 small">
+          <span class="dietary-dot dietary-veg"></span>
+          <span class="text-white fw-semibold">Vegetarian Options</span>
+          <span style="color: var(--tahdig-text-muted);">— Available across all sections</span>
+        </span>
+        <span class="d-none d-sm-inline text-secondary opacity-25">|</span>
+        <span class="d-flex align-items-center gap-2 small">
+          <span class="dietary-dot dietary-vegan"></span>
+          <span class="text-white fw-semibold">Vegan Options</span>
+          <span style="color: var(--tahdig-text-muted);">— Clearly labelled on each dish</span>
+        </span>
+        <span class="d-none d-md-inline text-secondary opacity-25">|</span>
+        <span class="small" style="color: var(--tahdig-text-muted);">
+          <i class="bi bi-telephone-fill text-gold me-1"></i> Allergies? Call <a href="tel:02045414261" class="text-gold text-decoration-none fw-semibold">020 4541 4261</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Menu Grid -->
+  <div class="container py-5">
+    <div class="row g-4" id="menuGridContainer">
+
+      <!-- ── CHARCOAL GRILLS ─────────────────────────────── -->
+
+      <!-- Mixed Grill -->
+      <div class="col-md-6 col-lg-4 menu-grid-item" data-category="tahdig">
+        <div class="card card-tahdig h-100">
+          <img src="img/dish-mixed-grill.jpg" class="card-img-top" style="height:220px;object-fit:cover;" alt="Mixed Grill Platter">
+          <div class="card-body p-4 d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-baseline mb-2">
+              <h5 class="text-white font-serif-luxury mb-0">Mixed Grill</h5>
+              <span class="text-gold fw-bold">£12.00</span>
+            </div>
+            <p class="text-secondary small flex-grow-1">Charcoal-grilled chicken shish, lamb kofta and chicken wings with rice, bread and salad.</p>
+            <div class="d-flex gap-2 mb-3"><span class="badge badge-gold">Halal</span><span class="badge badge-gold">Chef's Choice</span></div>
+            <div class="d-flex gap-2 mt-auto">
+              <button type="button" class="btn btn-outline-gold btn-sm flex-grow-1" data-quick-view="mixed-grill"><i class="bi bi-eye me-1"></i>Quick View</button>
+              <a href="dish-detail.html?dish=mixed-grill" class="btn btn-tahdig btn-sm flex-grow-1"><i class="bi bi-box-arrow-up-right me-1"></i>View Dish</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chicken Shish -->
+      <div class="col-md-6 col-lg-4 menu-grid-item" data-category="tahdig">
+        <div class="card card-tahdig h-100">
+          <img src="img/dish-chicken-shish.jpg" class="card-img-top" style="height:220px;object-fit:cover;" alt="Chicken Shish">
+          <div class="card-body p-4 d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-baseline mb-2">
+              <h5 class="text-white font-serif-luxury mb-0">Chicken Shish</h5>
+              <span class="text-gold fw-bold">£9.50</span>
+            </div>
+            <p class="text-secondary small flex-grow-1">Marinated chicken breast cubes charcoal-grilled on skewers, served with rice, salad and bread.</p>
+            <div class="d-flex gap-2 mb-3"><span class="badge badge-gold">Halal</span></div>
+            <div class="d-flex gap-2 mt-auto">
+              <button type="button" class="btn btn-outline-gold btn-sm flex-grow-1" data-quick-view="chicken-shish"><i class="bi bi-eye me-1"></i>Quick View</button>
+              <a href="dish-detail.html?dish=chicken-shish" class="btn btn-tahdig btn-sm flex-grow-1"><i class="bi bi-box-arrow-up-right me-1"></i>View Dish</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lamb Kofta -->
+      <div class="col-md-6 col-lg-4 menu-grid-item" data-category="tahdig">
+        <div class="card card-tahdig h-100">
+          <img src="img/dish-lamb-kofta.jpg" class="card-img-top" style="height:220px;object-fit:cover;" alt="Lamb Kofta">
+          <div class="card-body p-4 d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-baseline mb-2">
+              <h5 class="text-white font-serif-luxury mb-0">Lamb Kofta</h5>
+              <span class="text-gold fw-bold">£10.50</span>
+            </div>
+            <p class="text-secondary small flex-grow-1">Hand-spiced minced British lamb kofta skewers charcoal-grilled and served with rice and salad.</p>
+            <div class="d-flex gap-2 mb-3"><span class="badge badge-gold">Halal</span></div>
+            <div class="d-flex gap-2 mt-auto">
+              <button type="button" class="btn btn-outline-gold btn-sm flex-grow-1" data-quick-view="lamb-kofta"><i class="bi bi-eye me-1"></i>Quick View</button>
+              <a href="dish-detail.html?dish=lamb-kofta" class="btn btn-tahdig btn-sm flex-grow-1"><i class="bi bi-box-arrow-up-right me-1"></i>View Dish</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Grilled Chicken Wings -->
+      <div class="col-md-6 col-lg-4 menu-grid-item" data-category="tahdig">
+        <div class="card card-tahdig h-100">
+          <img src="img/dish-chicken-wings.jpg" class="card-img-top" style="height:220px;object-fit:cover;" alt="Grilled Chicken Wings">
+          <div class="card-body p-4 d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-baseline mb-2">
+              <h5 class="text-white font-serif-luxury mb-0">Grilled Chicken Wings</h5>
+              <span class="text-gold fw-bold">£8.50</span>
+            </div>
+            <p class="text-secondary small flex-grow-1">Six charcoal-grilled chicken wings in Lebanese spice marinade, served with homemade garlic sauce.</p>
+            <div class="d-flex gap-2 mb-3"><span class="badge badge-gold">Halal</span></div>
+            <div class="d-flex gap-2 mt-auto">
+              <button type="button" class="btn btn-outline-gold btn-sm flex-grow-1" data-quick-view="grilled-chicken-wings"><i class="bi bi-eye me-1"></i>Quick View</button>
+              <a href="dish-detail.html?dish=grilled-chicken-wings" class="btn btn-tahdig btn-sm flex-grow-1"><i class="bi bi-box-arrow-up-right me-1"></i>View Dish</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Boneless Grilled Chicken -->
+      <div class="col-md-6 col-lg-4 menu-grid-item" data-category="tahdig">
+        <div class="card card-tahdig h-100">
+          <img src="img/dish-boneless-chicken.jpg" class="card-img-top" style="height:220px;object-fit:cover;" alt="Boneless Grilled Chicken">
+          <div class="card-body p-4 d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-baseline mb-2">
+              <h5 class="text-white font-serif-luxury mb-0">Boneless Grilled Chicken</h5>
+              <span class="text-gold fw-bold">£11.50</span>
+            </div>
+            <p class="text-secondary small flex-grow-1">Half boneless chicken marinated in Lebanese spices, charcoal grilled, with chips or rice and salad.</p>
+            <div class="d-flex gap-2 mb-3"><span class="badge badge-gold">Halal</span></div>
+            <div class="d-flex gap-2 mt-auto">
+              <button type="button" class="btn btn-outline-gold btn-sm flex-grow-1" data-quick-view="boneless-chicken"><i class="bi bi-eye me-1"></i>Quick View</button>
+              <a href="dish-detail.html?dish=boneless-chicken" class="btn btn-tahdig btn-sm flex-grow-1"><i class="bi bi-box-arrow-up-right me-1"></i>View Dish</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── WRAPS & SHAWARMA ────────────────────────────── -->
+
+      <!-- Chicken Shawarma Wrap -->
+      <div class="col-md-6 col-lg-4 menu-grid-item" data-category="kebabs">
+        <div class="card card-tahdig h-100">
+          <img src="img/dish-chicken-shawarma-wrap.jpg" class="card-img-top" style="height:220px;object-fit:cover;" alt="Chicken Shawarma Wrap">
+          <div class="card-body p-4 d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-baseline mb-2">
+              <h5 class="text-white font-serif-luxury mb-0">Chicken Shawarma Wrap</h5>
+              <span class="text-gold fw-bold">£6.00</span>
+            </div>
+            <p class="text-secondary small flex-grow-1">Our #1 — marinated chicken shawarma, garlic sauce, pickles and fresh salad in a warm flatbread.</p>
+            <div class="d-flex gap-2 mb-3"><span class="badge badge-gold">Halal</span><span class="badge badge-gold">Bestseller</span></div>
+            <div class="d-flex gap-2 mt-auto">
+              <button type="button" class="btn btn-outline-gold btn-sm flex-grow-1" data-quick-view="chicken-shawarma-wrap"><i class="bi bi-eye me-1"></i>Quick View</button>
+              <a href="dish-detail.html?dish=chicken-shawarma-wrap" class="btn btn-tahdig btn-sm flex-grow-1"><i class="bi bi-box-arrow-up-right me-1"></i>View Dish</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lamb Shawarma Wrap -->
+      <div class="col-md-6 col-lg-4 menu-grid-item" data-category="kebabs">
+        <div class="card card-tahdig h-100">
+          <img src="img/dish-lamb-shawarma-wrap.jpg" class="card-img-top" style="height:220px;object-fit:cover;" alt="Lamb Shawarma Wrap">
+          <div class="card-body p-4 d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-baseline mb-2">
+              <h5 class="text-white font-serif-luxury mb-0">Lamb Shawarma Wrap</h5>
+              <span class="text-gold fw-bold">£7.00</span>
+            </div>
+            <p class="text-secondary small flex-grow-1">Slow-cooked lamb shawarma with tahini sauce, tomatoes and pickles in a warm Lebanese flatbread.</p>
+            <div class="d-flex gap-2 mb-3"><span class="badge badge-gold">Halal</span></div>
+            <div class="d-flex gap-2 mt-auto">
+              <button type="button" class="btn btn-outline-gold btn-sm flex-grow-1" data-quick-view="lamb-shawarma-wrap"><i class="bi bi-eye me-1"></i>Quick View</button>
+              <a href="dish-detail.html?dish=lamb-shawarma-wrap" class="btn btn-tahdig btn-sm flex-grow-1"><i class="bi bi-box-arrow-up-right me-1"></i>View Dish</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Falafel Wrap -->
+      <div class="col-md-6 col-lg-4 menu-grid-item" data-category="kebabs">
+        <div class="card card-tahdig h-100">
+          <img src="img/dish-falafel-wrap.jpg" class="card-img-top" style="height:220px;object-fit:cover;" alt="Falafel Wrap">
+          <div class="card-body p-4 d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-baseline mb-2">
+              <h5 class="text-white font-serif-luxury mb-0">Falafel Wrap</h5>
+              <span class="text-gold fw-bold">£6.00</span>
+            </div>
+            <p class="text-secondary small flex-grow-1">Crispy homemade falafel with hummus, tabbouleh and pickles in a warm flatbread. Vegan.</p>
+            <div class="d-flex gap-2 mb-3"><span class="badge badge-gold">Vegetarian</span><span class="badge badge-gold">Vegan</span></div>
+            <div class="d-flex gap-2 mt-auto">
+              <button type="button" class="btn btn-outline-gold btn-sm flex-grow-1" data-quick-view="falafel-wrap"><i class="bi bi-eye me-1"></i>Quick View</button>
+              <a href="dish-detail.html?dish=falafel-wrap" class="btn btn-tahdig btn-sm flex-grow-1"><i class="bi bi-box-arrow-up-right me-1"></i>View Dish</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mixed Shish Wrap -->
+      <div class="col-md-6 col-lg-4 menu-grid-item" data-category="kebabs">
+        <div class="card card-tahdig h-100">
+          <img src="img/dish-mixed-shish-wrap.jpg" class="card-img-top" style="height:220px;object-fit:cover;" alt="Mixed Shish Wrap">
+          <div class="card-body p-4 d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-baseline mb-2">
+              <h5 class="text-white font-serif-luxury mb-0">Mixed Shish Wrap</h5>
+              <span class="text-gold fw-bold">£7.50</span>
+            </div>
+            <p class="text-secondary small flex-grow-1">Chicken shish and lamb kofta in a warm Lebanese flatbread with garlic sauce and fresh salad.</p>
+            <div class="d-flex gap-2 mb-3"><span class="badge badge-gold">Halal</span></div>
+            <div class="d-flex gap-2 mt-auto">
+              <button type="button" class="btn btn-outline-gold btn-sm flex-grow-1" data-quick-view="mixed-wrap"><i class="bi bi-eye me-1"></i>Quick View</button>
+              <a href="dish-detail.html?dish=mixed-wrap" class="btn btn-tahdig btn-sm flex-grow-1"><i class="bi bi-box-arrow-up-right me-1"></i>View Dish</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── CURRIES & HOT DISHES ───────────────────────── -->
+
+      <!-- Chicken Curry with Rice -->
+      <div class="col-md-6 col-lg-4 menu-grid-item" data-category="stews">
+        <div class="card card-tahdig h-100">
+          <img src="img/dish-chicken-curry.jpg" class="card-img-top" style="height:220px;object-fit:cover;" alt="Chicken Curry with Rice">
+          <div class="card-body p-4 d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-baseline mb-2">
+              <h5 class="text-white font-serif-luxury mb-0">Chicken Curry with Rice</h5>
+              <span class="text-gold fw-bold">£6.00</span>
+            </div>
+            <p class="text-secondary small flex-grow-1">Tender chicken in a rich aromatic curry sauce with fluffy basmati rice. Great value.</p>
+            <div class="d-flex gap-2 mb-3"><span class="badge badge-gold">Halal</span><span class="badge badge-gold">Most Popular</span></div>
+            <div class="d-flex gap-2 mt-auto">
+              <button type="button" class="btn btn-outline-gold btn-sm flex-grow-1" data-quick-view="chicken-curry-rice"><i class="bi bi-eye me-1"></i>Quick View</button>
+              <a href="dish-detail.html?dish=chicken-curry-rice" class="btn btn-tahdig btn-sm flex-grow-1"><i class="bi bi-box-arrow-up-right me-1"></i>View Dish</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lamb Curry with Rice -->
+      <div class="col-md-6 col-lg-4 menu-grid-item" data-category="stews">
+        <div class="card card-tahdig h-100">
+          <img src="img/dish-lamb-curry.jpg" class="card-img-top" style="height:220px;object-fit:cover;" alt="Lamb Curry with Rice">
+          <div class="card-body p-4 d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-baseline mb-2">
+              <h5 class="text-white font-serif-luxury mb-0">Lamb Curry with Rice</h5>
+              <span class="text-gold fw-bold">£7.50</span>
+            </div>
+            <p class="text-secondary small flex-grow-1">Slow-cooked British lamb in a rich aromatic curry sauce, served with fluffy basmati rice.</p>
+            <div class="d-flex gap-2 mb-3"><span class="badge badge-gold">Halal</span></div>
+            <div class="d-flex gap-2 mt-auto">
+              <button type="button" class="btn btn-outline-gold btn-sm flex-grow-1" data-quick-view="lamb-curry-rice"><i class="bi bi-eye me-1"></i>Quick View</button>
+              <a href="dish-detail.html?dish=lamb-curry-rice" class="btn btn-tahdig btn-sm flex-grow-1"><i class="bi bi-box-arrow-up-right me-1"></i>View Dish</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vegetable Curry -->
+      <div class="col-md-6 col-lg-4 menu-grid-item" data-category="stews">
+        <div class="card card-tahdig h-100">
+          <img src="img/dish-veg-curry.jpg" class="card-img-top" style="height:220px;object-fit:cover;" alt="Vegetable Curry with Rice">
+          <div class="card-body p-4 d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-baseline mb-2">
+              <h5 class="text-white font-serif-luxury mb-0">Vegetable Curry with Rice</h5>
+              <span class="text-gold fw-bold">£6.00</span>
+            </div>
+            <p class="text-secondary small flex-grow-1">Seasonal vegetables slow-cooked in a rich curry sauce with basmati rice. Fully vegan.</p>
+            <div class="d-flex gap-2 mb-3"><span class="badge badge-gold">Vegetarian</span><span class="badge badge-gold">Vegan</span></div>
+            <div class="d-flex gap-2 mt-auto">
+              <button type="button" class="btn btn-outline-gold btn-sm flex-grow-1" data-quick-view="vegetable-curry"><i class="bi bi-eye me-1"></i>Quick View</button>
+              <a href="dish-detail.html?dish=vegetable-curry" class="btn btn-tahdig btn-sm flex-grow-1"><i class="bi bi-box-arrow-up-right me-1"></i>View Dish</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── MEZZE & STARTERS ───────────────────────────── -->
+
+      <!-- Vegetarian Mezze Platter -->
+      <div class="col-md-6 col-lg-4 menu-grid-item" data-category="starters">
+        <div class="card card-tahdig h-100">
+          <img src="img/dish-mezze-platter.jpg" class="card-img-top" style="height:220px;object-fit:cover;" alt="Vegetarian Mezze Platter">
+          <div class="card-body p-4 d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-baseline mb-2">
+              <h5 class="text-white font-serif-luxury mb-0">Vegetarian Mezze Platter</h5>
+              <span class="text-gold fw-bold">£9.90</span>
+            </div>
+            <p class="text-secondary small flex-grow-1">Hummus, moutabal, tabbouleh, falafel, samosas and warm bread. Perfect for two.</p>
+            <div class="d-flex gap-2 mb-3"><span class="badge badge-gold">Vegetarian</span><span class="badge badge-gold">For Two</span></div>
+            <div class="d-flex gap-2 mt-auto">
+              <button type="button" class="btn btn-outline-gold btn-sm flex-grow-1" data-quick-view="veggie-mezze-platter"><i class="bi bi-eye me-1"></i>Quick View</button>
+              <a href="dish-detail.html?dish=veggie-mezze-platter" class="btn btn-tahdig btn-sm flex-grow-1"><i class="bi bi-box-arrow-up-right me-1"></i>View Dish</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hummus -->
+      <div class="col-md-6 col-lg-4 menu-grid-item" data-category="starters">
+        <div class="card card-tahdig h-100">
+          <img src="img/dish-hummus.jpg" class="card-img-top" style="height:220px;object-fit:cover;" alt="Hummus with Bread">
+          <div class="card-body p-4 d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-baseline mb-2">
+              <h5 class="text-white font-serif-luxury mb-0">Hummus with Bread</h5>
+              <span class="text-gold fw-bold">£5.90</span>
+            </div>
+            <p class="text-secondary small flex-grow-1">Smooth homemade hummus with olive oil, paprika and warm Lebanese flatbread. Made fresh daily.</p>
+            <div class="d-flex gap-2 mb-3"><span class="badge badge-gold">Vegetarian</span><span class="badge badge-gold">Vegan</span></div>
+            <div class="d-flex gap-2 mt-auto">
+              <button type="button" class="btn btn-outline-gold btn-sm flex-grow-1" data-quick-view="hummus"><i class="bi bi-eye me-1"></i>Quick View</button>
+              <a href="dish-detail.html?dish=hummus" class="btn btn-tahdig btn-sm flex-grow-1"><i class="bi bi-box-arrow-up-right me-1"></i>View Dish</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Moutabal -->
+      <div class="col-md-6 col-lg-4 menu-grid-item" data-category="starters">
+        <div class="card card-tahdig h-100">
+          <img src="img/dish-moutabal.jpg" class="card-img-top" style="height:220px;object-fit:cover;" alt="Moutabal Aubergine Dip">
+          <div class="card-body p-4 d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-baseline mb-2">
+              <h5 class="text-white font-serif-luxury mb-0">Moutabal</h5>
+              <span class="text-gold fw-bold">£5.90</span>
+            </div>
+            <p class="text-secondary small flex-grow-1">Smoky roasted aubergine blended with tahini, garlic and lemon. A Lebanese classic with warm bread.</p>
+            <div class="d-flex gap-2 mb-3"><span class="badge badge-gold">Vegetarian</span><span class="badge badge-gold">Vegan</span></div>
+            <div class="d-flex gap-2 mt-auto">
+              <button type="button" class="btn btn-outline-gold btn-sm flex-grow-1" data-quick-view="moutabal"><i class="bi bi-eye me-1"></i>Quick View</button>
+              <a href="dish-detail.html?dish=moutabal" class="btn btn-tahdig btn-sm flex-grow-1"><i class="bi bi-box-arrow-up-right me-1"></i>View Dish</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Falafel Starter -->
+      <div class="col-md-6 col-lg-4 menu-grid-item" data-category="starters">
+        <div class="card card-tahdig h-100">
+          <img src="img/dish-falafel.jpg" class="card-img-top" style="height:220px;object-fit:cover;" alt="Falafel 6 pieces">
+          <div class="card-body p-4 d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-baseline mb-2">
+              <h5 class="text-white font-serif-luxury mb-0">Falafel (6 pcs)</h5>
+              <span class="text-gold fw-bold">£5.50</span>
+            </div>
+            <p class="text-secondary small flex-grow-1">Six crispy homemade falafel from chickpeas and fresh herbs, served with tahini dipping sauce.</p>
+            <div class="d-flex gap-2 mb-3"><span class="badge badge-gold">Vegetarian</span><span class="badge badge-gold">Vegan</span></div>
+            <div class="d-flex gap-2 mt-auto">
+              <button type="button" class="btn btn-outline-gold btn-sm flex-grow-1" data-quick-view="falafel-starter"><i class="bi bi-eye me-1"></i>Quick View</button>
+              <a href="dish-detail.html?dish=falafel-starter" class="btn btn-tahdig btn-sm flex-grow-1"><i class="bi bi-box-arrow-up-right me-1"></i>View Dish</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Full English Breakfast -->
+      <div class="col-md-6 col-lg-4 menu-grid-item" data-category="starters">
+        <div class="card card-tahdig h-100">
+          <img src="img/dish-full-english.jpg" class="card-img-top" style="height:220px;object-fit:cover;" alt="Full English Breakfast">
+          <div class="card-body p-4 d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-baseline mb-2">
+              <h5 class="text-white font-serif-luxury mb-0">Full English Breakfast</h5>
+              <span class="text-gold fw-bold">£8.50</span>
+            </div>
+            <p class="text-secondary small flex-grow-1">2 eggs, 2 toast, 2 halal sausages, mushrooms, baked beans and grilled tomato. Served from 8 AM.</p>
+            <div class="d-flex gap-2 mb-3"><span class="badge badge-gold">Halal</span><span class="badge badge-gold">All Day</span></div>
+            <div class="d-flex gap-2 mt-auto">
+              <button type="button" class="btn btn-outline-gold btn-sm flex-grow-1" data-quick-view="full-english"><i class="bi bi-eye me-1"></i>Quick View</button>
+              <a href="dish-detail.html?dish=full-english" class="btn btn-tahdig btn-sm flex-grow-1"><i class="bi bi-box-arrow-up-right me-1"></i>View Dish</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── SALADS & SOUPS ─────────────────────────────── -->
+
+      <!-- Tabbouleh -->
+      <div class="col-md-6 col-lg-4 menu-grid-item" data-category="salads">
+        <div class="card card-tahdig h-100">
+          <img src="img/dish-tabbouleh.jpg" class="card-img-top" style="height:220px;object-fit:cover;" alt="Tabbouleh Salad">
+          <div class="card-body p-4 d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-baseline mb-2">
+              <h5 class="text-white font-serif-luxury mb-0">Tabbouleh Salad</h5>
+              <span class="text-gold fw-bold">£5.50</span>
+            </div>
+            <p class="text-secondary small flex-grow-1">Finely chopped parsley, mint, tomatoes and bulgur wheat with lemon and olive oil dressing.</p>
+            <div class="d-flex gap-2 mb-3"><span class="badge badge-gold">Vegan</span><span class="badge badge-gold">Fresh Daily</span></div>
+            <div class="d-flex gap-2 mt-auto">
+              <button type="button" class="btn btn-outline-gold btn-sm flex-grow-1" data-quick-view="tabbouleh"><i class="bi bi-eye me-1"></i>Quick View</button>
+              <a href="dish-detail.html?dish=tabbouleh" class="btn btn-tahdig btn-sm flex-grow-1"><i class="bi bi-box-arrow-up-right me-1"></i>View Dish</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fattoush -->
+      <div class="col-md-6 col-lg-4 menu-grid-item" data-category="salads">
+        <div class="card card-tahdig h-100">
+          <img src="img/dish-fattoush.jpg" class="card-img-top" style="height:220px;object-fit:cover;" alt="Fattoush Salad">
+          <div class="card-body p-4 d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-baseline mb-2">
+              <h5 class="text-white font-serif-luxury mb-0">Fattoush Salad</h5>
+              <span class="text-gold fw-bold">£5.50</span>
+            </div>
+            <p class="text-secondary small flex-grow-1">Crisp romaine, tomatoes, cucumber, radish and toasted flatbread with tangy sumac dressing.</p>
+            <div class="d-flex gap-2 mb-3"><span class="badge badge-gold">Vegetarian</span></div>
+            <div class="d-flex gap-2 mt-auto">
+              <button type="button" class="btn btn-outline-gold btn-sm flex-grow-1" data-quick-view="fattoush"><i class="bi bi-eye me-1"></i>Quick View</button>
+              <a href="dish-detail.html?dish=fattoush" class="btn btn-tahdig btn-sm flex-grow-1"><i class="bi bi-box-arrow-up-right me-1"></i>View Dish</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lentil Soup -->
+      <div class="col-md-6 col-lg-4 menu-grid-item" data-category="salads">
+        <div class="card card-tahdig h-100">
+          <img src="img/dish-lentil-soup.jpg" class="card-img-top" style="height:220px;object-fit:cover;" alt="Lebanese Lentil Soup">
+          <div class="card-body p-4 d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-baseline mb-2">
+              <h5 class="text-white font-serif-luxury mb-0">Lebanese Lentil Soup</h5>
+              <span class="text-gold fw-bold">£4.50</span>
+            </div>
+            <p class="text-secondary small flex-grow-1">Silky red lentil soup with cumin, lemon and crispy fried onion topping. A Lebanese staple.</p>
+            <div class="d-flex gap-2 mb-3"><span class="badge badge-gold">Vegan</span><span class="badge badge-gold">Gluten-Free</span></div>
+            <div class="d-flex gap-2 mt-auto">
+              <button type="button" class="btn btn-outline-gold btn-sm flex-grow-1" data-quick-view="lentil-soup"><i class="bi bi-eye me-1"></i>Quick View</button>
+              <a href="dish-detail.html?dish=lentil-soup" class="btn btn-tahdig btn-sm flex-grow-1"><i class="bi bi-box-arrow-up-right me-1"></i>View Dish</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── DESSERTS & DRINKS ──────────────────────────── -->
+
+      <!-- Baklava -->
+      <div class="col-md-6 col-lg-4 menu-grid-item" data-category="desserts">
+        <div class="card card-tahdig h-100">
+          <img src="img/dish-baklava.jpg" class="card-img-top" style="height:220px;object-fit:cover;" alt="Baklava 3 pieces">
+          <div class="card-body p-4 d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-baseline mb-2">
+              <h5 class="text-white font-serif-luxury mb-0">Baklava (3 pcs)</h5>
+              <span class="text-gold fw-bold">£4.50</span>
+            </div>
+            <p class="text-secondary small flex-grow-1">Crisp golden baklava — flaky filo pastry, crushed pistachios and orange blossom honey syrup.</p>
+            <div class="d-flex gap-2 mb-3"><span class="badge badge-gold">Vegetarian</span><span class="badge badge-gold">Homemade</span></div>
+            <div class="d-flex gap-2 mt-auto">
+              <button type="button" class="btn btn-outline-gold btn-sm flex-grow-1" data-quick-view="baklava"><i class="bi bi-eye me-1"></i>Quick View</button>
+              <a href="dish-detail.html?dish=baklava" class="btn btn-tahdig btn-sm flex-grow-1"><i class="bi bi-box-arrow-up-right me-1"></i>View Dish</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lebanese Tea -->
+      <div class="col-md-6 col-lg-4 menu-grid-item" data-category="desserts">
+        <div class="card card-tahdig h-100">
+          <img src="img/dish-lebanese-tea.jpg" class="card-img-top" style="height:220px;object-fit:cover;" alt="Lebanese Tea with Mint">
+          <div class="card-body p-4 d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-baseline mb-2">
+              <h5 class="text-white font-serif-luxury mb-0">Lebanese Tea with Mint</h5>
+              <span class="text-gold fw-bold">£2.00</span>
+            </div>
+            <p class="text-secondary small flex-grow-1">Slow-steeped black tea with fresh mint leaves, served hot in a traditional glass.</p>
+            <div class="d-flex gap-2 mb-3"><span class="badge badge-gold">Hot Drink</span></div>
+            <div class="d-flex gap-2 mt-auto">
+              <button type="button" class="btn btn-outline-gold btn-sm flex-grow-1" data-quick-view="Lebanese-tea"><i class="bi bi-eye me-1"></i>Quick View</button>
+              <a href="dish-detail.html?dish=Lebanese-tea" class="btn btn-tahdig btn-sm flex-grow-1"><i class="bi bi-box-arrow-up-right me-1"></i>View Dish</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ayran -->
+      <div class="col-md-6 col-lg-4 menu-grid-item" data-category="desserts">
+        <div class="card card-tahdig h-100">
+          <img src="img/dish-ayran.jpg" class="card-img-top" style="height:220px;object-fit:cover;" alt="Ayran Yogurt Drink">
+          <div class="card-body p-4 d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-baseline mb-2">
+              <h5 class="text-white font-serif-luxury mb-0">Ayran Yogurt Drink</h5>
+              <span class="text-gold fw-bold">£2.50</span>
+            </div>
+            <p class="text-secondary small flex-grow-1">Chilled salted yogurt drink with mint — the classic Lebanese cooler alongside any grill or wrap.</p>
+            <div class="d-flex gap-2 mb-3"><span class="badge badge-gold">Refreshing</span></div>
+            <div class="d-flex gap-2 mt-auto">
+              <button type="button" class="btn btn-outline-gold btn-sm flex-grow-1" data-quick-view="ayran"><i class="bi bi-eye me-1"></i>Quick View</button>
+              <a href="dish-detail.html?dish=ayran" class="btn btn-tahdig btn-sm flex-grow-1"><i class="bi bi-box-arrow-up-right me-1"></i>View Dish</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cold Drinks -->
+      <div class="col-md-6 col-lg-4 menu-grid-item" data-category="desserts">
+        <div class="card card-tahdig h-100">
+          <img src="img/dish-cold-drinks.jpg" class="card-img-top" style="height:220px;object-fit:cover;" alt="Cold Drinks Selection">
+          <div class="card-body p-4 d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-baseline mb-2">
+              <h5 class="text-white font-serif-luxury mb-0">Cold Drinks</h5>
+              <span class="text-gold fw-bold">From £1.00</span>
+            </div>
+            <p class="text-secondary small flex-grow-1">Pepsi, 7UP, Fanta, water and juices from the fridge. From just £1 — ask at the counter.</p>
+            <div class="d-flex gap-2 mb-3"><span class="badge badge-gold">From £1</span></div>
+            <div class="d-flex gap-2 mt-auto">
+              <button type="button" class="btn btn-outline-gold btn-sm flex-grow-1" data-quick-view="cold-drink"><i class="bi bi-eye me-1"></i>Quick View</button>
+              <a href="dish-detail.html?dish=cold-drink" class="btn btn-tahdig btn-sm flex-grow-1"><i class="bi bi-box-arrow-up-right me-1"></i>View Dish</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- PDF Menu Download CTA -->
+  <section class="py-5 bg-black border-top border-warning border-opacity-10">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-7">
+          <div class="d-flex align-items-start gap-4">
+            <div class="flex-shrink-0 rounded-3 d-flex align-items-center justify-content-center"
+                 style="width:64px;height:64px;background:rgba(168,54,41,0.15);border:1px solid rgba(168,54,41,0.45);">
+              <i class="bi bi-file-earmark-pdf-fill fs-2" style="color:var(--tahdig-brand-light);"></i>
+            </div>
+            <div>
+              <span class="text-gold text-uppercase tracking-wider small fw-semibold">Take The Menu With You</span>
+              <h3 class="text-white font-serif-luxury mt-1 mb-2">Download Our Printable Menu</h3>
+              <p class="mb-0" style="color:var(--tahdig-text-muted);max-width:520px;line-height:1.7;">
+                Planning a group visit, corporate event, or just want to browse at leisure? Download the full PDF menu to share with your party or save for later. Available in English and Arabic.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 d-flex flex-wrap gap-3 justify-content-lg-end">
+          <a href="#" class="btn btn-tahdig px-4 py-3" aria-label="Download PDF menu in English"
+             onclick="alert('PDF download coming soon — call 020 4541 4261 for a copy.'); return false;">
+            <i class="bi bi-download me-2"></i>Download PDF Menu
+          </a>
+          <a href="reservation.html" class="btn btn-outline-gold px-4 py-3">
+            <i class="bi bi-calendar-check me-2"></i>Book a Table
+          </a>
+        </div>
+      </div>
+
+      <!-- Trust signals row -->
+      <div class="row mt-4 pt-4 border-top border-secondary border-opacity-15 g-3 text-center">
+        <div class="col-6 col-md-3">
+          <i class="bi bi-patch-check-fill fs-4 mb-2 d-block" style="color:var(--tahdig-gold);"></i>
+          <span class="small text-white fw-semibold d-block">100% Halal</span>
+          <span class="small" style="color:var(--tahdig-text-muted);">All meats certified</span>
+        </div>
+        <div class="col-6 col-md-3">
+          <i class="bi bi-flower1 fs-4 mb-2 d-block" style="color:var(--tahdig-gold);"></i>
+          <span class="small text-white fw-semibold d-block">Fresh Daily</span>
+          <span class="small" style="color:var(--tahdig-text-muted);">No frozen ingredients</span>
+        </div>
+        <div class="col-6 col-md-3">
+          <i class="bi bi-people-fill fs-4 mb-2 d-block" style="color:var(--tahdig-gold);"></i>
+          <span class="small text-white fw-semibold d-block">Group Bookings</span>
+          <span class="small" style="color:var(--tahdig-text-muted);">Up to 40 covers</span>
+        </div>
+        <div class="col-6 col-md-3">
+          <i class="bi bi-telephone-fill fs-4 mb-2 d-block" style="color:var(--tahdig-gold);"></i>
+          <span class="small text-white fw-semibold d-block">020 4541 4261</span>
+          <span class="small" style="color:var(--tahdig-text-muted);">Daily 9 AM – 9:00 PM</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /PDF Menu Download CTA -->
+
+  <!-- Footer -->
+  <footer class="bg-black pt-5 pb-4 border-top border-warning border-opacity-10 text-secondary">
+    <div class="container">
+      <div class="row g-4 justify-content-between">
+        <!-- Brand & Trust Badges -->
+        <div class="col-lg-4">
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <span class="brand-logo-wrap"><img src="img/logo.svg" alt="Nil Lebanese Logo" width="54" height="62"></span>
+            <span class="fw-bold fs-4 text-white font-serif-luxury">NIL LEBANESE</span>
+          </div>
+          <p class="small">
+            Your neighbourhood Lebanese café on Chiswick High Road. Freshly made Lebanese food from breakfast to dinner — wraps, mezze, charcoal grills and more.
+          </p>
+          <div class="d-flex gap-3 fs-5 mt-3">
+            <a href="https://instagram.com/nillebanese" target="_blank" class="text-gold" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://facebook.com/nillebanese" target="_blank" class="text-gold" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="tel:02045414261" class="text-gold" aria-label="Call us"><i class="bi bi-telephone-fill"></i></a>
+          </div>
+          <div class="d-flex flex-wrap gap-3 mt-4">
+            <img src="img/authentic-persian-cuisine.png" alt="Authentic Lebanese Food - Top Quality" class="footer-badge" loading="lazy" width="84" height="84">
+            <img src="img/halal-food.png" alt="100% Halal Food Certified" class="footer-badge" loading="lazy" width="84" height="84">
+            <img src="img/free-delivery.png" alt="Free Delivery Services" class="footer-badge" loading="lazy" width="84" height="84">
+          </div>
+        </div>
+        <!-- Quick Navigation -->
+        <div class="col-lg-3 col-6">
+          <h6 class="text-white font-serif-luxury mb-3">Quick Navigation</h6>
+          <ul class="list-unstyled small d-flex flex-column gap-2">
+            <li><a href="index.html" class="text-decoration-none text-secondary hover-gold">Home</a></li>
+            <li><a href="menu.html" class="text-decoration-none text-secondary hover-gold">Complete Menu</a></li>
+            <li><a href="about.html" class="text-decoration-none text-secondary hover-gold">Our Story</a></li>
+            <li><a href="reservation.html" class="text-decoration-none text-secondary hover-gold">Table Reservation</a></li>
+            <li><a href="contact.html" class="text-decoration-none text-secondary hover-gold">Find Us in London</a></li>
+          </ul>
+        </div>
+        <!-- Visit Us -->
+        <div class="col-lg-4 col-6">
+          <h6 class="text-white font-serif-luxury mb-3">Visit Us</h6>
+          <p class="small mb-2"><i class="bi bi-geo-alt text-gold me-2"></i> 405 Chiswick High Rd, London W4 4AR</p>
+          <p class="small mb-2"><i class="bi bi-train-front text-gold me-2"></i> District Line (Gunnersbury Station)</p>
+          <p class="small mb-2"><i class="bi bi-telephone text-gold me-2"></i> 020 4541 4261</p>
+          <p class="small mb-0"><i class="bi bi-clock text-gold me-2"></i> Mon - Sun: 8:00 AM - 9:00 PM</p>
+        </div>
+      </div>
+      <div class="text-center pt-4 mt-4 border-top border-secondary border-opacity-25 small">
+        <p class="mb-0">© 2026 Nil Lebanese Café Ltd. All Rights Reserved. Designed by Walid Khalafi</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/dishes.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

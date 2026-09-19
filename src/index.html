@@ -1,0 +1,576 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/svg+xml" href="img/logo.svg">
+  <title>Nil Lebanese | Modern Lebanese Café & Golden Crust</title>
+  <meta name="description" content="Your neighbourhood Lebanese café on Chiswick High Road. Freshly made Lebanese food from breakfast to dinner — wraps, mezze, charcoal grills and more.">
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Vazirmatn:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="bg-black py-2 border-bottom border-warning border-opacity-10 small">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap gap-2 text-secondary">
+      <div class="d-flex align-items-center gap-3">
+        <span><i class="bi bi-geo-alt-fill text-gold me-1"></i> 405 Chiswick High Rd, London W4 4AR</span>
+        <span class="d-none d-md-inline"><i class="bi bi-clock-fill text-gold me-1"></i> Open Daily: 8:00 AM – 9:00 PM</span>
+      </div>
+      <div class="d-flex align-items-center gap-3">
+        <a href="tel:02045414261" class="text-decoration-none text-light"><i class="bi bi-telephone-fill text-gold me-1"></i> 020 4541 4261</a>
+        <span class="badge badge-gold px-2 py-1"><i class="bi bi-star-fill me-1"></i> 4.4 / 5.0 Google</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-tahdig sticky-top py-3">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-3" href="index.html">
+        <span class="brand-logo-wrap"><img src="img/logo.svg" alt="Nil Lebanese Logo" width="54" height="62"></span>
+        <div>
+          <span class="fs-4 fw-black text-white font-serif-luxury tracking-wider d-block lh-1">NIL LEBANESE</span>
+          <small class="text-uppercase fw-semibold" style="color: var(--tahdig-gold); letter-spacing: 2px; font-size: 0.65rem;">Lebanese Café · Chiswick</small>
+        </div>
+      </a>
+      <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-lg-3">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="menu.html" data-nav-menu>Menu</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="about.html">Our Story</a></li>
+          <li class="nav-item"><a class="nav-link" href="reservation.html">Reservations</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact & Location</a></li>
+          <li class="nav-item ms-lg-2">
+            <a href="reservation.html" class="btn btn-tahdig btn-sm px-3 py-2"><i class="bi bi-calendar-check me-1"></i> Book Table</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Professional Hero Image Slider -->
+  <section id="heroSlider" class="hero-carousel carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="6000">
+    <!-- Carousel Indicators -->
+    <div class="carousel-indicators mb-4">
+      <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    </div>
+
+    <!-- Carousel Items -->
+    <div class="carousel-inner">
+      <!-- Slide 1: Shawarma -->
+      <div class="carousel-item active">
+        <img src="img/hero-royal-tahdig.jpg" alt="Freshly Made Lebanese Food at Nil Lebanese Chiswick">
+        <div class="carousel-overlay"></div>
+        <div class="carousel-caption">
+          <div class="hero-glow-badge">
+            <i class="bi bi-stars"></i> Chiswick's Favourite Lebanese Café
+          </div>
+          <h1 class="display-3 fw-bold text-white mb-3 font-serif-luxury">
+            Fresh Lebanese Food<br><span class="text-brand">All Day, Every Day</span>
+          </h1>
+          <p class="lead text-light text-opacity-85 mb-4 mx-auto" style="max-width: 700px;">
+            Breakfast from 8 AM, wraps from £6, mezze, curries and charcoal grills — freshly made with care on Chiswick High Road.
+          </p>
+          <div class="d-flex justify-content-center flex-wrap gap-3">
+            <a href="reservation.html" class="btn btn-tahdig btn-lg animate-pulse-gold"><i class="bi bi-calendar2-heart me-2"></i>Reserve a Table</a>
+            <a href="menu.html" class="btn btn-outline-gold btn-lg"><i class="bi bi-book-half me-2"></i>Explore Menu</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2: Charcoal Grill -->
+      <div class="carousel-item">
+        <img src="img/hero-kebabs.jpg" alt="Charcoal Grilled Shawarma and Kebabs at Nil Lebanese">
+        <div class="carousel-overlay"></div>
+        <div class="carousel-caption">
+          <div class="hero-glow-badge">
+            <i class="bi bi-fire text-danger"></i> 100% Halal · Real Charcoal Grill
+          </div>
+          <h1 class="display-3 fw-bold text-white mb-3 font-serif-luxury">
+            Charcoal Grilled<br><span class="text-brand">Shawarma & Mixed Grill</span>
+          </h1>
+          <p class="lead text-light text-opacity-85 mb-4 mx-auto" style="max-width: 700px;">
+            Marinated chicken shawarma, lamb kofta and shish — cooked over real charcoal, never a flat-top. The difference is in every bite.
+          </p>
+          <div class="d-flex justify-content-center flex-wrap gap-3">
+            <a href="menu.html" class="btn btn-tahdig btn-lg"><i class="bi bi-fire me-2"></i>View Grill Menu</a>
+            <a href="tel:02045414261" class="btn btn-outline-gold btn-lg"><i class="bi bi-telephone me-2"></i>Call 020 4541 4261</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3: Mezze & Wraps -->
+      <div class="carousel-item">
+        <img src="img/hero-stews.jpg" alt="Lebanese Mezze Platter and Wraps at Nil Lebanese">
+        <div class="carousel-overlay"></div>
+        <div class="carousel-caption">
+          <div class="hero-glow-badge">
+            <i class="bi bi-flower2 text-warning"></i> Hummus · Moutabal · Falafel · Tabbouleh
+          </div>
+          <h1 class="display-3 fw-bold text-white mb-3 font-serif-luxury">
+            Lebanese Mezze &<br><span class="text-brand">Freshly Made Wraps</span>
+          </h1>
+          <p class="lead text-light text-opacity-85 mb-4 mx-auto" style="max-width: 700px;">
+            Our #1 chicken shawarma wrap at £6, vegetarian mezze platter for two at £9.90, and hummus made fresh every morning.
+          </p>
+          <div class="d-flex justify-content-center flex-wrap gap-3">
+            <a href="menu.html" class="btn btn-tahdig btn-lg"><i class="bi bi-list-ul me-2"></i>View Full Menu</a>
+            <a href="about.html" class="btn btn-outline-gold btn-lg"><i class="bi bi-heart me-2"></i>Our Story</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 4: Café & Atmosphere -->
+      <div class="carousel-item">
+        <img src="img/hero-interior.jpg" alt="Nil Lebanese Café Interior Chiswick High Road">
+        <div class="carousel-overlay"></div>
+        <div class="carousel-caption">
+          <div class="hero-glow-badge">
+            <i class="bi bi-gem text-info"></i> 405 Chiswick High Rd · W4 4AR
+          </div>
+          <h1 class="display-3 fw-bold text-white mb-3 font-serif-luxury">
+            Your Neighbourhood<br><span class="text-brand">Lebanese Café</span>
+          </h1>
+          <p class="lead text-light text-opacity-85 mb-4 mx-auto" style="max-width: 700px;">
+            A welcoming spot on Chiswick High Road — open from breakfast through to a late dinner, seven days a week.
+          </p>
+          <div class="d-flex justify-content-center flex-wrap gap-3">
+            <a href="reservation.html" class="btn btn-tahdig btn-lg"><i class="bi bi-calendar-check me-2"></i>Reserve Your Table</a>
+            <a href="contact.html" class="btn btn-outline-gold btn-lg"><i class="bi bi-compass me-2"></i>Directions</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroSlider" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroSlider" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </section>
+
+  <!-- Highlights Strip -->
+  <section class="py-4 border-top border-bottom border-danger border-opacity-20 bg-black">
+    <div class="container">
+      <div class="row g-4 text-center">
+        <div class="col-6 col-md-3">
+          <i class="bi bi-fire text-danger fs-2 mb-2 d-block"></i>
+          <h6 class="text-white mb-1">Charcoal Fire Grilling</h6>
+          <small class="text-secondary">Authentic natural charcoal embers</small>
+        </div>
+        <div class="col-6 col-md-3">
+          <i class="bi bi-flower1 text-warning fs-2 mb-2 d-block"></i>
+          <h6 class="text-white mb-1">Fresh Mezze Daily</h6>
+          <small class="text-secondary">Hummus, moutabal &amp; falafel</small>
+        </div>
+        <div class="col-6 col-md-3">
+          <i class="bi bi-patch-check-fill text-success fs-2 mb-2 d-block"></i>
+          <h6 class="text-white mb-1">100% Halal Cuts</h6>
+          <small class="text-secondary">Certified British farm meats</small>
+        </div>
+        <div class="col-6 col-md-3">
+          <i class="bi bi-geo-alt-fill text-danger fs-2 mb-2 d-block"></i>
+          <h6 class="text-white mb-1">Gunnersbury Tube</h6>
+          <small class="text-secondary">2 min walk (District Line)</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Menu Items -->
+  <section class="py-5">
+    <div class="container py-4">
+      <div class="text-center mb-5">
+        <span class="text-gold gold-shimmer text-uppercase tracking-wider small fw-semibold">Signature Creations</span>
+        <h2 class="display-5 text-white font-serif-luxury mt-1">Most Loved at Nil Lebanese</h2>
+        <div class="mx-auto bg-warning bg-opacity-50" style="height: 2px; width: 60px;"></div>
+      </div>
+      <div class="row g-4">
+        <!-- Item 1: Chicken Shawarma Wrap -->
+        <div class="col-md-4">
+          <div class="card card-tahdig h-100">
+            <img src="img/dish-chicken-shawarma-wrap.jpg" class="card-img-top" alt="Chicken Shawarma Wrap" style="height: 240px; object-fit: cover;">
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <h5 class="card-title text-white font-serif-luxury mb-0">Chicken Shawarma Wrap</h5>
+                <span class="text-gold fw-bold fs-5">£6.00</span>
+              </div>
+              <p class="card-text text-secondary small flex-grow-1">Our #1 — marinated chicken shawarma, garlic sauce, pickles and fresh salad in a warm Lebanese flatbread.</p>
+              <div class="mt-3 pt-3 border-top border-secondary border-opacity-25">
+                <span class="badge badge-gold mb-2 d-inline-block">Bestseller</span>
+                <div class="d-flex gap-2">
+                  <button type="button" class="btn btn-outline-gold btn-sm flex-grow-1" data-quick-view="chicken-shawarma-wrap"><i class="bi bi-eye me-1"></i>Quick View</button>
+                  <a href="dish-detail.html?dish=chicken-shawarma-wrap" class="btn btn-tahdig btn-sm flex-grow-1"><i class="bi bi-box-arrow-up-right me-1"></i>View Dish</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Item 2: Mixed Grill -->
+        <div class="col-md-4">
+          <div class="card card-tahdig h-100">
+            <img src="img/dish-mixed-grill.jpg" class="card-img-top" alt="Mixed Grill Platter" style="height: 240px; object-fit: cover;">
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <h5 class="card-title text-white font-serif-luxury mb-0">Mixed Grill</h5>
+                <span class="text-gold fw-bold fs-5">£12.00</span>
+              </div>
+              <p class="card-text text-secondary small flex-grow-1">Charcoal-grilled chicken shish, lamb kofta and chicken wings with rice, bread and salad.</p>
+              <div class="mt-3 pt-3 border-top border-secondary border-opacity-25">
+                <span class="badge badge-gold mb-2 d-inline-block">Chef's Choice</span>
+                <div class="d-flex gap-2">
+                  <button type="button" class="btn btn-outline-gold btn-sm flex-grow-1" data-quick-view="mixed-grill"><i class="bi bi-eye me-1"></i>Quick View</button>
+                  <a href="dish-detail.html?dish=mixed-grill" class="btn btn-tahdig btn-sm flex-grow-1"><i class="bi bi-box-arrow-up-right me-1"></i>View Dish</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Item 3: Vegetarian Mezze Platter -->
+        <div class="col-md-4">
+          <div class="card card-tahdig h-100">
+            <img src="img/dish-mezze-platter.jpg" class="card-img-top" alt="Vegetarian Mezze Platter" style="height: 240px; object-fit: cover;">
+            <div class="card-body p-4 d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <h5 class="card-title text-white font-serif-luxury mb-0">Vegetarian Mezze Platter</h5>
+                <span class="text-gold fw-bold fs-5">£9.90</span>
+              </div>
+              <p class="card-text text-secondary small flex-grow-1">Hummus, moutabal, tabbouleh, falafel, samosas and warm bread. Perfect for two.</p>
+              <div class="mt-3 pt-3 border-top border-secondary border-opacity-25">
+                <span class="badge badge-gold mb-2 d-inline-block">For Two</span>
+                <div class="d-flex gap-2">
+                  <button type="button" class="btn btn-outline-gold btn-sm flex-grow-1" data-quick-view="veggie-mezze-platter"><i class="bi bi-eye me-1"></i>Quick View</button>
+                  <a href="dish-detail.html?dish=veggie-mezze-platter" class="btn btn-tahdig btn-sm flex-grow-1"><i class="bi bi-box-arrow-up-right me-1"></i>View Dish</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-5">
+        <a href="menu.html" class="btn btn-tahdig px-4 py-2"><i class="bi bi-arrow-right-circle me-2"></i>Browse Full Menu & Drinks</a>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Our Story & Culinary Heritage Section -->
+  <section class="heritage-section py-5" data-reveal>
+    <div class="container py-4">
+      <div class="row align-items-center g-5">
+
+        <!-- Left: image -->
+        <div class="col-lg-5 order-lg-1" data-reveal>
+          <div class="heritage-img-wrap">
+            <img src="img/hero-stews.jpg" alt="Lebanese food freshly made at Nil Lebanese on Chiswick High Road" loading="lazy">
+            <div class="heritage-img-caption">
+              <span class="crunch-badge mb-2 d-inline-block"><i class="bi bi-geo-alt-fill me-1"></i> Chiswick, London</span>
+              <p class="text-white fw-semibold mb-0 small">Family-run since the first day our founder lit her first charcoal.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: copy -->
+        <div class="col-lg-7 order-lg-2" data-reveal>
+          <span class="text-gold gold-shimmer text-uppercase tracking-wider small fw-semibold">Our Story & Culinary Heritage</span>
+          <h2 class="display-5 text-white font-serif-luxury mt-2 mb-3">
+            Centuries of Lebanese Craft,<br>
+            <span class="text-brand">Served in London's Chiswick</span>
+          </h2>
+          <p class="mb-4" style="color: var(--tahdig-text-muted); line-height: 1.8;">
+            The Tahdig story begins with our founder — a chef, a mother, and a keeper of ancient Lebanese recipes passed down through her family in Isfahan. Every dish at our Chiswick table carries a memory: the golden crunch of saffron rice pressed against a copper pot, the first aromatic steam of Ghormeh Sabzi on a winter morning, the warmth of real Lebanese hospitality that never asks if you've had enough.
+          </p>
+
+          <div class="d-flex flex-column gap-4 mb-5">
+            <div class="heritage-pillar" data-reveal>
+              <div class="heritage-pillar-icon"><i class="bi bi-flower1"></i></div>
+              <div class="heritage-pillar-text">
+                <strong>Made Fresh Every Day</strong>
+                <span>From hummus to wraps to curries — everything is prepared fresh when you order. We source quality produce daily and cook from scratch, because that is what real Lebanese food actually is.</span>
+              </div>
+            </div>
+            <div class="heritage-pillar" data-reveal>
+              <div class="heritage-pillar-icon"><i class="bi bi-fire"></i></div>
+              <div class="heritage-pillar-text">
+                <strong>Real Charcoal Grilling</strong>
+                <span>Our shawarma and mixed grill are cooked over real charcoal — never a flat-top, never gas. The smoky char you get with every bite is the result of doing it properly, the way it should always be done.</span>
+              </div>
+            </div>
+            <div class="heritage-pillar" data-reveal>
+              <div class="heritage-pillar-icon"><i class="bi bi-house-heart"></i></div>
+              <div class="heritage-pillar-text">
+                <strong>Heritage of Chiswick Dining</strong>
+                <span>Since opening on Chiswick High Road, Nil Lebanese has become the local go-to — a neighbourhood table where families, workers and food lovers all eat well without breaking the bank.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="d-flex flex-wrap gap-3">
+            <a href="about.html" class="btn btn-tahdig px-4 py-2"><i class="bi bi-heart me-2"></i>Read Our Full Story</a>
+            <a href="menu.html" class="btn btn-outline-gold px-4 py-2"><i class="bi bi-book-half me-2"></i>Explore the Menu</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- /Our Story & Culinary Heritage -->
+
+  <!-- Quick Reservation Section -->
+  <section class="py-5 bg-black position-relative">
+    <div class="container py-4">
+      <div class="row align-items-center">
+        <div class="col-lg-5 mb-4 mb-lg-0">
+          <span class="text-gold text-uppercase tracking-wider small fw-semibold">Hospitality & Ambiance</span>
+          <h2 class="display-6 text-white font-serif-luxury mb-3">Reserve Your Table</h2>
+          <p class="text-secondary mb-4">
+            Whether it's a quick lunch, a family dinner, or a celebration — our welcoming café on Chiswick High Road is open 7 days a week from 8 AM.
+          </p>
+          <div class="d-flex flex-column gap-3">
+            <div class="d-flex align-items-center gap-3">
+              <div class="rounded-circle bg-warning bg-opacity-10 p-2 text-gold"><i class="bi bi-clock fs-5"></i></div>
+              <div>
+                <strong class="text-white d-block">Open Daily</strong>
+                <small class="text-secondary">8:00 AM to 9:00 PM</small>
+              </div>
+            </div>
+            <div class="d-flex align-items-center gap-3">
+              <div class="rounded-circle bg-warning bg-opacity-10 p-2 text-gold"><i class="bi bi-telephone fs-5"></i></div>
+              <div>
+                <strong class="text-white d-block">Phone Inquiries</strong>
+                <small class="text-secondary">020 4541 4261</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <div class="card-tahdig p-4 p-md-5">
+            <h4 class="text-gold font-serif-luxury mb-3">Quick Table Booking</h4>
+            <form id="bootstrapReservationForm">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label small text-secondary">Full Name</label>
+                  <input type="text" id="guestName" class="form-control form-control-tahdig" placeholder="e.g. Sarah Jenkins" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label small text-secondary">Phone Number</label>
+                  <input type="tel" class="form-control form-control-tahdig" placeholder="07123 456789" required>
+                </div>
+                <div class="col-md-4">
+                  <label class="form-label small text-secondary">Date</label>
+                  <input type="date" id="guestDate" class="form-control form-control-tahdig" required>
+                </div>
+                <div class="col-md-4">
+                  <label class="form-label small text-secondary">Time</label>
+                  <select id="guestTime" class="form-select form-select-tahdig" required>
+                    <option value="18:00">18:00 (6:00 PM)</option>
+                    <option value="19:00" selected>19:00 (7:00 PM)</option>
+                    <option value="20:00">20:00 (8:00 PM)</option>
+                    <option value="21:00">21:00 (9:00 PM)</option>
+                  </select>
+                </div>
+                <div class="col-md-4">
+                  <label class="form-label small text-secondary">Guests</label>
+                  <select class="form-select form-select-tahdig">
+                    <option value="2">2 Guests</option>
+                    <option value="4" selected>4 Guests</option>
+                    <option value="6">6 Guests</option>
+                    <option value="8">8+ Guests</option>
+                  </select>
+                </div>
+                <div class="col-12 mt-4">
+                  <button type="submit" class="btn btn-tahdig w-100 py-3"><i class="bi bi-check2-circle me-2"></i>Confirm Table Request</button>
+                </div>
+              </div>
+            </form>
+            <div id="bookingConfirmationAlert"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Reviews / Social Proof Section -->
+  <section class="reviews-section py-5" data-reveal>
+    <div class="container py-4">
+
+      <div class="text-center mb-5">
+        <span class="text-gold gold-shimmer text-uppercase tracking-wider small fw-semibold">What Our Guests Say</span>
+        <h2 class="display-5 text-white font-serif-luxury mt-1">Trusted by Thousands of Diners</h2>
+        <div class="mx-auto bg-warning bg-opacity-50 mt-3" style="height: 2px; width: 60px;"></div>
+        <p class="mt-3" style="color: var(--tahdig-text-muted); max-width: 540px; margin-left: auto; margin-right: auto;">
+          Real words from real guests — from first-time visitors to regulars who come back every week.
+        </p>
+      </div>
+
+      <div class="row g-4">
+
+        <!-- Review 1 -->
+        <div class="col-md-4" data-reveal>
+          <div class="review-card">
+            <div class="review-stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p class="review-quote">
+              "The chicken shawarma wrap is the best I have had in London — and it's only six pounds. The hummus tastes homemade and the service is brilliant. This place is a real gem on Chiswick High Road."
+            </p>
+            <div class="d-flex align-items-center gap-3 mt-auto">
+              <div class="review-avatar" aria-hidden="true">SM</div>
+              <div>
+                <strong class="text-white d-block" style="font-size: 0.9rem;">Sophie M.</strong>
+                <span style="color: var(--tahdig-text-muted); font-size: 0.78rem;">Chiswick, London</span>
+              </div>
+              <div class="ms-auto">
+                <span class="review-source-badge"><i class="bi bi-google"></i> Google</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="col-md-4" data-reveal>
+          <div class="review-card">
+            <div class="review-stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p class="review-quote">
+              "We came for a family birthday and left feeling like royalty. the team greeted us personally, the Ghormeh Sabzi had clearly simmered for hours, and the Bastani Sonnati for dessert was homemade perfection. Will definitely return."
+            </p>
+            <div class="d-flex align-items-center gap-3 mt-auto">
+              <div class="review-avatar" aria-hidden="true">DR</div>
+              <div>
+                <strong class="text-white d-block" style="font-size: 0.9rem;">Daniel R.</strong>
+                <span style="color: var(--tahdig-text-muted); font-size: 0.78rem;">Gunnersbury, London</span>
+              </div>
+              <div class="ms-auto">
+                <span class="review-source-badge"><i class="bi bi-binoculars-fill"></i> TripAdvisor</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="col-md-4" data-reveal>
+          <div class="review-card">
+            <div class="review-stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p class="review-quote">
+              "Finally a proper Lebanese café in West London. The charcoal grill flavour is the real deal and the chicken curry with rice for £6 is unbeatable value. Feels like home — will be back every week."
+            </p>
+            <div class="d-flex align-items-center gap-3 mt-auto">
+              <div class="review-avatar" aria-hidden="true">LC</div>
+              <div>
+                <strong class="text-white d-block" style="font-size: 0.9rem;">Laura C.</strong>
+                <span style="color: var(--tahdig-text-muted); font-size: 0.78rem;">Kew, London</span>
+              </div>
+              <div class="ms-auto">
+                <span class="review-source-badge"><i class="bi bi-google"></i> Google</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Aggregate trust bar -->
+      <div class="d-flex flex-wrap justify-content-center align-items-center gap-4 mt-5 pt-2">
+        <div class="text-center">
+          <p class="display-6 text-gold fw-bold font-serif-luxury mb-0">4.4 <span class="fs-5">/ 5.0</span></p>
+          <p class="small mb-0" style="color: var(--tahdig-text-muted);">Google Rating</p>
+        </div>
+        <div class="vr bg-secondary opacity-25 d-none d-md-block" style="height: 50px;"></div>
+        <div class="text-center">
+          <p class="display-6 text-gold fw-bold font-serif-luxury mb-0">500+</p>
+          <p class="small mb-0" style="color: var(--tahdig-text-muted);">Verified Reviews</p>
+        </div>
+        <div class="vr bg-secondary opacity-25 d-none d-md-block" style="height: 50px;"></div>
+        <div class="text-center">
+          <p class="display-6 text-gold fw-bold font-serif-luxury mb-0">#1</p>
+          <p class="small mb-0" style="color: var(--tahdig-text-muted);">Best Lebanese · Chiswick W4</p>
+        </div>
+        <div class="vr bg-secondary opacity-25 d-none d-md-block" style="height: 50px;"></div>
+        <div class="text-center">
+          <a href="reservation.html" class="btn btn-tahdig btn-sm px-4 py-2"><i class="bi bi-calendar-check me-2"></i>Join Our Happy Guests</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- /Customer Reviews -->
+
+  <!-- Footer -->
+  <footer class="bg-black pt-5 pb-4 border-top border-warning border-opacity-10 text-secondary">
+    <div class="container">
+      <div class="row g-4 justify-content-between">
+        <div class="col-lg-4">
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <span class="brand-logo-wrap"><img src="img/logo.svg" alt="Nil Lebanese Logo" width="54" height="62"></span>
+            <span class="fw-bold fs-4 text-white font-serif-luxury">NIL LEBANESE</span>
+          </div>
+          <p class="small">
+            Your neighbourhood Lebanese café on Chiswick High Road. Freshly made Lebanese food from breakfast to dinner — wraps, mezze, charcoal grills and more.
+          </p>
+          <div class="d-flex gap-3 fs-5 mt-3">
+            <a href="https://instagram.com/nillebanese" target="_blank" class="text-gold" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://facebook.com/nillebanese" target="_blank" class="text-gold" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="tel:02045414261" class="text-gold" aria-label="Call us"><i class="bi bi-telephone-fill"></i></a>
+          </div>
+          <div class="d-flex flex-wrap gap-3 mt-4">
+            <img src="img/authentic-persian-cuisine.png" alt="Authentic Lebanese Food - Top Quality" class="footer-badge" loading="lazy" width="84" height="84">
+            <img src="img/halal-food.png" alt="100% Halal Food Certified" class="footer-badge" loading="lazy" width="84" height="84">
+            <img src="img/free-delivery.png" alt="Free Delivery Services" class="footer-badge" loading="lazy" width="84" height="84">
+          </div>
+        </div>
+        <div class="col-lg-3 col-6">
+          <h6 class="text-white font-serif-luxury mb-3">Quick Navigation</h6>
+          <ul class="list-unstyled small d-flex flex-column gap-2">
+            <li><a href="index.html" class="text-decoration-none text-secondary hover-gold">Home</a></li>
+            <li><a href="menu.html" class="text-decoration-none text-secondary hover-gold">Complete Menu</a></li>
+            <li><a href="about.html" class="text-decoration-none text-secondary hover-gold">Our Story</a></li>
+            <li><a href="reservation.html" class="text-decoration-none text-secondary hover-gold">Table Reservation</a></li>
+            <li><a href="contact.html" class="text-decoration-none text-secondary hover-gold">Find Us in London</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-6">
+          <h6 class="text-white font-serif-luxury mb-3">Visit Us</h6>
+          <p class="small mb-2"><i class="bi bi-geo-alt text-gold me-2"></i> 405 Chiswick High Rd, London W4 4AR</p>
+          <p class="small mb-2"><i class="bi bi-train-front text-gold me-2"></i> District Line (Gunnersbury Station)</p>
+          <p class="small mb-2"><i class="bi bi-telephone text-gold me-2"></i> 020 4541 4261</p>
+          <p class="small mb-0"><i class="bi bi-clock text-gold me-2"></i> Mon - Sun: 8:00 AM - 9:00 PM</p>
+        </div>
+      </div>
+      <div class="text-center pt-4 mt-4 border-top border-secondary border-opacity-25 small">
+        <p class="mb-0">© 2026 Nil Lebanese Café Ltd. All Rights Reserved. Designed by Walid Khalafi</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/dishes.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

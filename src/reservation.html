@@ -1,0 +1,588 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/svg+xml" href="img/logo.svg">
+  <title>Reserve a Table | Nil Lebanese</title>
+  <meta name="description" content="Book your table at Nil Lebanese. Authentic Lebanese food in Chiswick — open daily 9 AM to 9:00 PM. Call 020 4541 4261 or reserve online.">
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Vazirmatn:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ╔══════════════════════════════════════════════════╗ -->
+  <!--   TOP INFO BAR                                      -->
+  <!-- ╚══════════════════════════════════════════════════╝ -->
+  <div class="bg-black py-2 border-bottom border-warning border-opacity-10 small">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap gap-2 text-secondary">
+      <div class="d-flex align-items-center gap-3">
+        <span><i class="bi bi-geo-alt-fill text-gold me-1"></i> 405 Chiswick High Rd, London W4 4AR</span>
+        <span class="d-none d-md-inline"><i class="bi bi-clock-fill text-gold me-1"></i> Open Daily: 8:00 AM – 9:00 PM</span>
+      </div>
+      <div class="d-flex align-items-center gap-3">
+        <a href="tel:02045414261" class="text-decoration-none text-light"><i class="bi bi-telephone-fill text-gold me-1"></i> 020 4541 4261</a>
+        <span class="badge badge-gold px-2 py-1"><i class="bi bi-star-fill me-1"></i> 4.4 / 5.0 Google</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ╔══════════════════════════════════════════════════╗ -->
+  <!--   STICKY NAVBAR                                     -->
+  <!-- ╚══════════════════════════════════════════════════╝ -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-tahdig sticky-top py-3">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-3" href="index.html">
+        <span class="brand-logo-wrap"><img src="img/logo.svg" alt="Nil Lebanese Logo" width="54" height="62"></span>
+        <div>
+          <span class="fs-4 fw-black text-white font-serif-luxury tracking-wider d-block lh-1">NIL LEBANESE</span>
+          <small class="text-uppercase fw-semibold" style="color: var(--tahdig-gold); letter-spacing: 2px; font-size: 0.65rem;">Lebanese Café · Chiswick</small>
+        </div>
+      </a>
+      <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-lg-3">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="menu.html" data-nav-menu>Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">Our Story</a></li>
+          <li class="nav-item"><a class="nav-link active" href="reservation.html">Reservations</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact &amp; Location</a></li>
+          <li class="nav-item ms-lg-2">
+            <a href="reservation.html" class="btn btn-tahdig btn-sm px-3 py-2"><i class="bi bi-calendar-check me-1"></i> Book Table</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ╔══════════════════════════════════════════════════╗ -->
+  <!--   PAGE HEADER BANNER                                -->
+  <!-- ╚══════════════════════════════════════════════════╝ -->
+  <div class="resv-page-banner position-relative overflow-hidden">
+    <img src="img/hero-interior.jpg" alt="Nil Lebanese warm dining room" class="resv-banner-img">
+    <div class="resv-banner-overlay"></div>
+    <div class="container position-relative z-1 py-5 text-center">
+      <span class="hero-glow-badge mb-3 d-inline-flex">
+        <i class="bi bi-calendar2-heart me-1"></i> Reservations — Open 7 Days a Week
+      </span>
+      <h1 class="display-3 fw-bold text-white font-serif-luxury mb-3">
+        Reserve Your<br>
+        <span class="text-brand">Lebanese Table</span>
+      </h1>
+      <p class="lead mb-0 mx-auto" style="color:var(--tahdig-text-muted);max-width:580px;line-height:1.75;">
+        Secure your table at Nil Lebanese on Chiswick High Road. Fill in your details and we'll confirm within the hour.
+      </p>
+    </div>
+  </div>
+
+  <!-- ╔══════════════════════════════════════════════════╗ -->
+  <!--   TRUST STRIP                                       -->
+  <!-- ╚══════════════════════════════════════════════════╝ -->
+  <div class="py-4 border-bottom border-warning border-opacity-10 bg-black">
+    <div class="container">
+      <div class="row g-3 text-center">
+        <div class="col-6 col-md-3">
+          <i class="bi bi-clock-fill text-gold fs-4 mb-1 d-block"></i>
+          <span class="text-white fw-semibold small d-block">Open Daily</span>
+          <span class="small" style="color:var(--tahdig-text-muted);">8:00 AM – 9:00 PM</span>
+        </div>
+        <div class="col-6 col-md-3">
+          <i class="bi bi-people-fill text-gold fs-4 mb-1 d-block"></i>
+          <span class="text-white fw-semibold small d-block">Up to 40 Covers</span>
+          <span class="small" style="color:var(--tahdig-text-muted);">Groups warmly welcome</span>
+        </div>
+        <div class="col-6 col-md-3">
+          <i class="bi bi-patch-check-fill text-gold fs-4 mb-1 d-block"></i>
+          <span class="text-white fw-semibold small d-block">Instant Confirmation</span>
+          <span class="small" style="color:var(--tahdig-text-muted);">Response within 60 min</span>
+        </div>
+        <div class="col-6 col-md-3">
+          <i class="bi bi-telephone-fill text-gold fs-4 mb-1 d-block"></i>
+          <span class="text-white fw-semibold small d-block">020 4541 4261</span>
+          <span class="small" style="color:var(--tahdig-text-muted);">Call to book directly</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ╔══════════════════════════════════════════════════╗ -->
+  <!--   MAIN CONTENT — FORM + SIDEBAR                     -->
+  <!-- ╚══════════════════════════════════════════════════╝ -->
+  <section class="py-5" style="background:var(--tahdig-dark-bg);">
+    <div class="container py-4">
+      <div class="row g-5 align-items-start">
+
+        <!-- ── LEFT: Reservation Form ── -->
+        <div class="col-lg-7" data-reveal>
+
+          <div class="mb-4">
+            <span class="text-gold gold-shimmer text-uppercase tracking-wider small fw-semibold">Hospitality Booking</span>
+            <h2 class="display-6 text-white font-serif-luxury mt-2 mb-1">Book Your Table</h2>
+            <p style="color:var(--tahdig-text-muted);">
+              For parties larger than 14, please call us directly on
+              <a href="tel:02045414261" class="text-gold text-decoration-none fw-semibold">020 4541 4261</a>.
+            </p>
+          </div>
+
+          <div class="resv-form-card">
+            <form id="bootstrapReservationForm" novalidate>
+              <div class="row g-3">
+
+                <!-- Guest Name -->
+                <div class="col-md-6">
+                  <label for="guestName" class="resv-label">
+                    <i class="bi bi-person me-1"></i> Guest Name <span class="text-brand">*</span>
+                  </label>
+                  <input type="text" id="guestName" class="form-control form-control-tahdig"
+                         placeholder="e.g. Sarah Jenkins" required autocomplete="name">
+                </div>
+
+                <!-- Phone -->
+                <div class="col-md-6">
+                  <label for="guestPhone" class="resv-label">
+                    <i class="bi bi-telephone me-1"></i> Contact Phone <span class="text-brand">*</span>
+                  </label>
+                  <input type="tel" id="guestPhone" class="form-control form-control-tahdig"
+                         placeholder="07123 456 789" required autocomplete="tel">
+                </div>
+
+                <!-- Email -->
+                <div class="col-md-6">
+                  <label for="guestEmail" class="resv-label">
+                    <i class="bi bi-envelope me-1"></i> Email Address <span class="text-brand">*</span>
+                  </label>
+                  <input type="email" id="guestEmail" class="form-control form-control-tahdig"
+                         placeholder="name@example.com" required autocomplete="email">
+                </div>
+
+                <!-- Guest Count -->
+                <div class="col-md-6">
+                  <label for="guestCount" class="resv-label">
+                    <i class="bi bi-people me-1"></i> Number of Guests
+                  </label>
+                  <select id="guestCount" class="form-select form-select-tahdig">
+                    <option value="2">2 Guests (Table for Two)</option>
+                    <option value="4" selected>4 Guests (Standard Family Table)</option>
+                    <option value="6">6 Guests</option>
+                    <option value="8">8 Guests</option>
+                    <option value="12">Large Party (10–14 Guests)</option>
+                  </select>
+                </div>
+
+                <!-- Date -->
+                <div class="col-md-6">
+                  <label for="guestDate" class="resv-label">
+                    <i class="bi bi-calendar3 me-1"></i> Preferred Date <span class="text-brand">*</span>
+                  </label>
+                  <input type="date" id="guestDate" class="form-control form-control-tahdig" required>
+                </div>
+
+                <!-- Time -->
+                <div class="col-md-6">
+                  <label for="guestTime" class="resv-label">
+                    <i class="bi bi-clock me-1"></i> Preferred Time <span class="text-brand">*</span>
+                  </label>
+                  <select id="guestTime" class="form-select form-select-tahdig" required>
+                    <option value="12:30">12:30 PM — Lunch</option>
+                    <option value="13:30">1:30 PM — Lunch</option>
+                    <option value="17:30">5:30 PM — Early Dinner</option>
+                    <option value="19:00" selected>7:00 PM — Dinner Peak</option>
+                    <option value="20:30">8:30 PM — Dinner</option>
+                    <option value="21:30">9:30 PM — Late Dinner</option>
+                  </select>
+                </div>
+
+                <!-- Occasion -->
+                <div class="col-md-6">
+                  <label for="guestOccasion" class="resv-label">
+                    <i class="bi bi-stars me-1"></i> Occasion
+                  </label>
+                  <select id="guestOccasion" class="form-select form-select-tahdig">
+                    <option value="">No special occasion</option>
+                    <option value="birthday">Birthday Celebration</option>
+                    <option value="anniversary">Anniversary</option>
+                    <option value="date">Romantic Date Night</option>
+                    <option value="business">Business Meal</option>
+                    <option value="family">Family Gathering</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+
+                <!-- Seating Preference -->
+                <div class="col-md-6">
+                  <label class="resv-label"><i class="bi bi-layout-three-columns me-1"></i> Seating Preference</label>
+                  <div class="d-flex flex-column gap-2 mt-1">
+                    <div class="resv-radio-option">
+                      <input class="form-check-input" type="radio" name="seatingRadio" id="seat1" value="main" checked>
+                      <label class="form-check-label" for="seat1">
+                        <i class="bi bi-grid-fill me-1 text-gold"></i> Main Dining Hall
+                      </label>
+                    </div>
+                    <div class="resv-radio-option">
+                      <input class="form-check-input" type="radio" name="seatingRadio" id="seat2" value="booth">
+                      <label class="form-check-label" for="seat2">
+                        <i class="bi bi-gem me-1 text-gold"></i> Window Booth
+                      </label>
+                    </div>
+                    <div class="resv-radio-option">
+                      <input class="form-check-input" type="radio" name="seatingRadio" id="seat3" value="window">
+                      <label class="form-check-label" for="seat3">
+                        <i class="bi bi-heart me-1 text-gold"></i> Romantic Window Corner
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Special Requests -->
+                <div class="col-12">
+                  <label for="guestNotes" class="resv-label">
+                    <i class="bi bi-chat-text me-1"></i> Special Requests or Dietary Notes
+                  </label>
+                  <textarea id="guestNotes" class="form-control form-control-tahdig" rows="3"
+                            placeholder="Allergies, birthday cake arrangement, high chair, wheelchair access…"></textarea>
+                </div>
+
+                <!-- Submit -->
+                <div class="col-12 mt-2">
+                  <button type="submit" class="btn btn-tahdig w-100 py-3 fs-6 animate-pulse-gold">
+                    <i class="bi bi-calendar-check-fill me-2"></i>Complete Reservation
+                  </button>
+                  <p class="text-center mt-2 mb-0" style="color:var(--tahdig-text-muted);font-size:0.78rem;">
+                    <i class="bi bi-lock-fill me-1"></i> Your details are kept private and never shared.
+                  </p>
+                </div>
+
+              </div>
+            </form>
+
+            <!-- JS confirmation alert injected here by main.js -->
+            <div id="bookingConfirmationAlert"></div>
+          </div>
+        </div>
+
+        <!-- ── RIGHT: Info sidebar ── -->
+        <div class="col-lg-5" data-reveal>
+
+          <!-- Opening hours card -->
+          <div class="resv-info-card mb-4">
+            <h5 class="text-white font-serif-luxury mb-4">
+              <i class="bi bi-clock-fill text-gold me-2"></i>Opening Hours
+            </h5>
+            <div class="d-flex flex-column gap-3">
+              <div class="resv-hours-row">
+                <span class="text-white fw-semibold small">Monday – Thursday</span>
+                <span class="resv-hours-time">8:00 AM – 9:00 PM</span>
+              </div>
+              <div class="resv-hours-divider"></div>
+              <div class="resv-hours-row">
+                <span class="text-white fw-semibold small">Friday – Saturday</span>
+                <span class="resv-hours-time resv-hours-peak">8:00 AM – 9:00 PM <span class="resv-peak-badge">Peak</span></span>
+              </div>
+              <div class="resv-hours-divider"></div>
+              <div class="resv-hours-row">
+                <span class="text-white fw-semibold small">Sunday</span>
+                <span class="resv-hours-time">8:00 AM – 8:30 PM</span>
+              </div>
+            </div>
+            <div class="mt-4 pt-3" style="border-top:1px solid rgba(168,54,41,0.2);">
+              <a href="tel:02045414261" class="d-flex align-items-center gap-3 text-decoration-none resv-call-link">
+                <div class="resv-call-icon"><i class="bi bi-telephone-fill"></i></div>
+                <div>
+                  <span class="text-white fw-semibold d-block small">Call to Reserve</span>
+                  <span class="text-gold fw-bold">020 4541 4261</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Location card -->
+          <div class="resv-info-card mb-4">
+            <h5 class="text-white font-serif-luxury mb-3">
+              <i class="bi bi-geo-alt-fill text-gold me-2"></i>Find Us
+            </h5>
+            <p class="small mb-2" style="color:var(--tahdig-text-muted);line-height:1.65;">
+              405 Chiswick High Rdnue, Chiswick<br>Edgware, London <strong class="text-white">W4 4AR</strong>
+            </p>
+            <div class="d-flex flex-column gap-2 mt-3">
+              <div class="d-flex align-items-center gap-2 small">
+                <i class="bi bi-train-front text-gold"></i>
+                <span style="color:var(--tahdig-text-muted);">Gunnersbury Underground — District Line, 2 min walk</span>
+              </div>
+              <div class="d-flex align-items-center gap-2 small">
+                <i class="bi bi-p-square-fill text-gold"></i>
+                <span style="color:var(--tahdig-text-muted);">Free street parking available on Chiswick High Rd evenings</span>
+              </div>
+              <div class="d-flex align-items-center gap-2 small">
+                <i class="bi bi-bus-front text-gold"></i>
+                <span style="color:var(--tahdig-text-muted);">Bus routes 324, 292 — stop directly outside</span>
+              </div>
+            </div>
+            <a href="contact.html" class="btn btn-outline-gold btn-sm w-100 mt-4">
+              <i class="bi bi-compass me-1"></i>Full Directions &amp; Map
+            </a>
+          </div>
+
+          <!-- What to expect card -->
+          <div class="resv-info-card">
+            <h5 class="text-white font-serif-luxury mb-3">
+              <i class="bi bi-stars text-gold me-2"></i>What to Expect
+            </h5>
+            <div class="d-flex flex-column gap-3">
+              <div class="d-flex align-items-start gap-3">
+                <div class="resv-expect-icon"><i class="bi bi-flower1"></i></div>
+                <div>
+                  <span class="text-white fw-semibold small d-block mb-1">Fresh Mezze &amp; Wraps</span>
+                  <span class="small" style="color:var(--tahdig-text-muted);">Hummus, moutabal, falafel — made fresh daily.</span>
+                </div>
+              </div>
+              <div class="d-flex align-items-start gap-3">
+                <div class="resv-expect-icon"><i class="bi bi-fire"></i></div>
+                <div>
+                  <span class="text-white fw-semibold small d-block mb-1">Charcoal Shawarma &amp; Grills</span>
+                  <span class="small" style="color:var(--tahdig-text-muted);">100% Halal, real charcoal — never gas or flat-top.</span>
+                </div>
+              </div>
+              <div class="d-flex align-items-start gap-3">
+                <div class="resv-expect-icon"><i class="bi bi-hourglass-split"></i></div>
+                <div>
+                  <span class="text-white fw-semibold small d-block mb-1">All-Day Lebanese Menu</span>
+                  <span class="small" style="color:var(--tahdig-text-muted);">Breakfast, wraps, curries &amp; grills — 8 AM to 9 PM.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- /right sidebar -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ╔══════════════════════════════════════════════════╗ -->
+  <!--   BOOKING POLICIES & FAQs ACCORDION                 -->
+  <!-- ╚══════════════════════════════════════════════════╝ -->
+  <section class="py-5 border-top border-warning border-opacity-10"
+           style="background:linear-gradient(160deg,#19100e 0%,#12100e 60%,#1a0f0d 100%);">
+    <div class="container py-4">
+
+      <div class="text-center mb-5" data-reveal>
+        <span class="text-gold gold-shimmer text-uppercase tracking-wider small fw-semibold">Before You Arrive</span>
+        <h2 class="display-6 text-white font-serif-luxury mt-2">Booking Policies &amp; FAQs</h2>
+        <div class="mx-auto bg-warning bg-opacity-50 mt-3" style="height:2px;width:60px;"></div>
+      </div>
+
+      <div class="row g-5 align-items-start">
+
+        <!-- Accordion -->
+        <div class="col-lg-7" data-reveal>
+          <div class="accordion resv-accordion" id="bookingFaqAccordion">
+
+            <!-- FAQ 1 -->
+            <div class="accordion-item resv-accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button resv-accordion-btn" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                  <i class="bi bi-people-fill me-2 text-gold"></i>Group Bookings of 6 or More
+                </button>
+              </h3>
+              <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#bookingFaqAccordion">
+                <div class="accordion-body resv-accordion-body">
+                  For parties of 6 or more we recommend booking at least 24 hours in advance. Groups of 10+ are very welcome — please call us on <a href="tel:02045414261" class="text-gold text-decoration-none fw-semibold">020 4541 4261</a> to discuss arrangements. We'll do our best to accommodate your full party comfortably.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="accordion-item resv-accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button resv-accordion-btn collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                  <i class="bi bi-x-circle me-2 text-gold"></i>Cancellation &amp; Amendment Policy
+                </button>
+              </h3>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#bookingFaqAccordion">
+                <div class="accordion-body resv-accordion-body">
+                  We ask for at least <strong class="text-white">24 hours notice</strong> for any cancellations or date changes. For groups of 8 or more, we kindly request 48 hours notice so we can offer the table to other guests. To amend or cancel a booking, please call us directly rather than using the online form.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="accordion-item resv-accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button resv-accordion-btn collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                  <i class="bi bi-clock-history me-2 text-gold"></i>Peak Weekend &amp; Holiday Hours
+                </button>
+              </h3>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#bookingFaqAccordion">
+                <div class="accordion-body resv-accordion-body">
+                  Friday and Saturday lunchtimes and evenings are our busiest sessions — we recommend booking at least 2 days ahead. During UK public holidays we may adjust our hours slightly, so please call ahead on <a href="tel:02045414261" class="text-gold text-decoration-none fw-semibold">020 4541 4261</a> to confirm.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="accordion-item resv-accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button resv-accordion-btn collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                  <i class="bi bi-egg-fried me-2 text-gold"></i>Dietary &amp; Allergy Requirements
+                </button>
+              </h3>
+              <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#bookingFaqAccordion">
+                <div class="accordion-body resv-accordion-body">
+                  All our meats are <strong class="text-white">100% Halal certified</strong>. We offer a wide range of vegetarian and vegan dishes clearly labelled on the menu. For serious allergies (nuts, gluten, dairy), please note them in the Special Requests field <em>and</em> inform your server on arrival so the kitchen can take extra precautions.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="accordion-item resv-accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button resv-accordion-btn collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
+                  <i class="bi bi-gift me-2 text-gold"></i>Birthday &amp; Special Occasion Arrangements
+                </button>
+              </h3>
+              <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#bookingFaqAccordion">
+                <div class="accordion-body resv-accordion-body">
+                  We love celebrating with you. Select your occasion in the form and we'll do our best to make it special — a candle, a complimentary dessert, or a personalised touch. For cake deliveries or decorations, just let us know at least 24 hours ahead.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 6 -->
+            <div class="accordion-item resv-accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button resv-accordion-btn collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#faq6" aria-expanded="false" aria-controls="faq6">
+                  <i class="bi bi-bag-check me-2 text-gold"></i>Takeaway &amp; Delivery
+                </button>
+              </h3>
+              <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#bookingFaqAccordion">
+                <div class="accordion-body resv-accordion-body">
+                  We offer takeaway collection and local delivery for most menu items. Takeaway orders can be placed by calling <a href="tel:02045414261" class="text-gold text-decoration-none fw-semibold">020 4541 4261</a>. Note that some dishes — particularly our charcoal grills — are best eaten fresh in the café for the full experience. Still, most of our menu travels well and we do our best to pack it carefully.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Policy Summary Cards -->
+        <div class="col-lg-5" data-reveal>
+          <div class="d-flex flex-column gap-4">
+
+            <div class="resv-policy-card">
+              <div class="resv-policy-icon"><i class="bi bi-shield-check"></i></div>
+              <div>
+                <strong class="text-white d-block mb-1">Confirmed Within 60 Minutes</strong>
+                <span class="small" style="color:var(--tahdig-text-muted);">Every online booking receives a personal confirmation call or SMS from our team within 60 minutes.</span>
+              </div>
+            </div>
+
+            <div class="resv-policy-card">
+              <div class="resv-policy-icon"><i class="bi bi-people"></i></div>
+              <div>
+                <strong class="text-white d-block mb-1">Groups of 6–40 Catered</strong>
+                <span class="small" style="color:var(--tahdig-text-muted);">From intimate celebrations to full venue hire — we accommodate all party sizes with advance notice.</span>
+              </div>
+            </div>
+
+            <div class="resv-policy-card">
+              <div class="resv-policy-icon"><i class="bi bi-calendar-x"></i></div>
+              <div>
+                <strong class="text-white d-block mb-1">Free Cancellation (24h Notice)</strong>
+                <span class="small" style="color:var(--tahdig-text-muted);">Cancel or reschedule with no charge — just give us a call at least 24 hours before your booking.</span>
+              </div>
+            </div>
+
+            <div class="resv-policy-card resv-policy-card--gold">
+              <div class="resv-policy-icon resv-policy-icon--gold"><i class="bi bi-telephone-fill"></i></div>
+              <div>
+                <strong class="text-white d-block mb-1">Prefer to Call?</strong>
+                <a href="tel:02045414261" class="text-gold fw-bold text-decoration-none fs-5">020 4541 4261</a>
+                <span class="small d-block mt-1" style="color:var(--tahdig-text-muted);">Daily 9 AM – 11 PM · We always pick up.</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ╔══════════════════════════════════════════════════╗ -->
+  <!--   FOOTER                                            -->
+  <!-- ╚══════════════════════════════════════════════════╝ -->
+  <footer class="bg-black pt-5 pb-4 border-top border-warning border-opacity-10 text-secondary">
+    <div class="container">
+      <div class="row g-4 justify-content-between">
+
+        <!-- Brand & Trust Badges -->
+        <div class="col-lg-4">
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <span class="brand-logo-wrap"><img src="img/logo.svg" alt="Nil Lebanese Logo" width="54" height="62"></span>
+            <span class="fw-bold fs-4 text-white font-serif-luxury">NIL LEBANESE</span>
+          </div>
+          <p class="small">
+            Your neighbourhood Lebanese café on Chiswick High Road. Freshly made Lebanese food from breakfast to dinner — wraps, mezze, charcoal grills and more.
+          </p>
+          <div class="d-flex gap-3 fs-5 mt-3">
+            <a href="https://instagram.com/nillebanese" target="_blank" class="text-gold" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://facebook.com/nillebanese" target="_blank" class="text-gold" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="tel:02045414261" class="text-gold" aria-label="Call us"><i class="bi bi-telephone-fill"></i></a>
+          </div>
+          <div class="d-flex flex-wrap gap-3 mt-4">
+            <img src="img/authentic-persian-cuisine.png" alt="Authentic Lebanese Food - Top Quality" class="footer-badge" loading="lazy" width="84" height="84">
+            <img src="img/halal-food.png" alt="100% Halal Food Certified" class="footer-badge" loading="lazy" width="84" height="84">
+            <img src="img/free-delivery.png" alt="Free Delivery Services" class="footer-badge" loading="lazy" width="84" height="84">
+          </div>
+        </div>
+
+        <!-- Quick Navigation -->
+        <div class="col-lg-3 col-6">
+          <h6 class="text-white font-serif-luxury mb-3">Quick Navigation</h6>
+          <ul class="list-unstyled small d-flex flex-column gap-2">
+            <li><a href="index.html" class="text-decoration-none text-secondary hover-gold">Home</a></li>
+            <li><a href="menu.html" class="text-decoration-none text-secondary hover-gold">Complete Menu</a></li>
+            <li><a href="about.html" class="text-decoration-none text-secondary hover-gold">Our Story</a></li>
+            <li><a href="reservation.html" class="text-decoration-none text-secondary hover-gold">Table Reservation</a></li>
+            <li><a href="contact.html" class="text-decoration-none text-secondary hover-gold">Find Us in London</a></li>
+          </ul>
+        </div>
+
+        <!-- Visit Us -->
+        <div class="col-lg-4 col-6">
+          <h6 class="text-white font-serif-luxury mb-3">Visit Us</h6>
+          <p class="small mb-2"><i class="bi bi-geo-alt text-gold me-2"></i> 405 Chiswick High Rd, London W4 4AR</p>
+          <p class="small mb-2"><i class="bi bi-train-front text-gold me-2"></i> District Line (Gunnersbury Station)</p>
+          <p class="small mb-2"><i class="bi bi-telephone text-gold me-2"></i> 020 4541 4261</p>
+          <p class="small mb-0"><i class="bi bi-clock text-gold me-2"></i> Mon - Sun: 8:00 AM - 9:00 PM</p>
+        </div>
+
+      </div>
+      <div class="text-center pt-4 mt-4 border-top border-secondary border-opacity-25 small">
+        <p class="mb-0">© 2026 Nil Lebanese Café Ltd. All Rights Reserved. Designed by Walid Khalafi</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/dishes.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
